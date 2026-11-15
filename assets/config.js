@@ -5,5 +5,5 @@ window.AYMABA_CONFIG = {
   COMMUNICATOR_URL: "https://2577ws-glitch.github.io/pecs-aac/",
   // TODO: вставить ссылку на страницу продажи набора глаголов (нынешний сайт AYMABA).
   // Пока стоит "#", кнопка «Купить» показывается как «Скоро» и не нажимается.
-  VERB_SET_URL: "#"
+  VERB_SET_URL: "https://apple-reef-pearl-jolly.grok.me/"
 };
