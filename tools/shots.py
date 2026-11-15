@@ -14,9 +14,20 @@ with sync_playwright() as p:
         for lang in ["ru", "kk"]:
             pg.goto(base + "?lang=" + lang); pg.wait_for_load_state("networkidle")
             pg.screenshot(path=str(out / f"home_{lang}_{name}.png"), full_page=True)
-        pg.goto(base + "?lang=ru")
+        pg.goto(base + "?lang=ru"); pg.wait_for_load_state("networkidle")
         if name == "mobile":
             pg.click(".menu-toggle"); pg.screenshot(path=str(out / "menu_open_mobile.png"))
+        for lang in ["ru", "kk"]:
+            pg.goto(base + "library.html?lang=" + lang); pg.wait_for_load_state("networkidle"); pg.wait_for_timeout(800)
+            pg.screenshot(path=str(out / f"library_{lang}_{name}.png"))
+        pg.goto(base + "library.html?lang=ru"); pg.wait_for_load_state("networkidle")
+        pg.fill("#q", "яблок"); pg.wait_for_timeout(300)
+        pg.screenshot(path=str(out / f"library_search_{name}.png"))
+        pg.fill("#q", ""); pg.click(".chip[data-cat='1']"); pg.wait_for_timeout(500)
+        pg.screenshot(path=str(out / f"library_verbs_{name}.png"))
+        pg.click("#grid li:not([hidden]) .cardbtn"); pg.wait_for_timeout(500)
+        pg.screenshot(path=str(out / f"library_viewer_{name}.png"))
+        print(name, pg.inner_text("#count"))
         for doc in ["oferta", "terms", "faq"]:
             pg.goto(base + doc + ".html"); pg.wait_for_load_state("networkidle")
             pg.screenshot(path=str(out / f"{doc}_{name}.png"), full_page=False)

@@ -1,0 +1,3155 @@
+{
+ "categories": [
+  {
+   "num": 1,
+   "ru": "глаголы"
+  },
+  {
+   "num": 17,
+   "ru": "еда"
+  },
+  {
+   "num": 18,
+   "ru": "овощи"
+  },
+  {
+   "num": 19,
+   "ru": "фрукты"
+  },
+  {
+   "num": 20,
+   "ru": "ягоды"
+  },
+  {
+   "num": 21,
+   "ru": "напитки"
+  },
+  {
+   "num": 23,
+   "ru": "мебель"
+  },
+  {
+   "num": 24,
+   "ru": "посуда"
+  },
+  {
+   "num": 25,
+   "ru": "бытовая техника"
+  },
+  {
+   "num": 26,
+   "ru": "повседневные предметы"
+  },
+  {
+   "num": 27,
+   "ru": "гаджеты и экраны"
+  },
+  {
+   "num": 35,
+   "ru": "игрушки"
+  },
+  {
+   "num": 40,
+   "ru": "домашние животные"
+  },
+  {
+   "num": 41,
+   "ru": "дикие животные"
+  },
+  {
+   "num": 42,
+   "ru": "морские животные"
+  },
+  {
+   "num": 43,
+   "ru": "птицы"
+  },
+  {
+   "num": 44,
+   "ru": "насекомые"
+  },
+  {
+   "num": 45,
+   "ru": "природа"
+  },
+  {
+   "num": 46,
+   "ru": "цветы и растения"
+  },
+  {
+   "num": 47,
+   "ru": "погода"
+  },
+  {
+   "num": 54,
+   "ru": "канцелярия"
+  },
+  {
+   "num": 72,
+   "ru": "казахская культура"
+  },
+  {
+   "num": 73,
+   "ru": "комментирование"
+  },
+  {
+   "num": 74,
+   "ru": "признаки для просьб"
+  },
+  {
+   "num": 75,
+   "ru": "предлоги"
+  },
+  {
+   "num": 76,
+   "ru": "части предметов"
+  }
+ ],
+ "cards": [
+  {
+   "id": "bezhat",
+   "ru": "бежать",
+   "cat": 1
+  },
+  {
+   "id": "bolet",
+   "ru": "болеть",
+   "cat": 1
+  },
+  {
+   "id": "brosat",
+   "ru": "бросать",
+   "cat": 1
+  },
+  {
+   "id": "v_tualet",
+   "ru": "в туалет",
+   "cat": 1
+  },
+  {
+   "id": "vzyat",
+   "ru": "взять",
+   "cat": 1
+  },
+  {
+   "id": "vklyuchit",
+   "ru": "включить",
+   "cat": 1
+  },
+  {
+   "id": "vsyo",
+   "ru": "всё",
+   "cat": 1
+  },
+  {
+   "id": "vyklyuchit",
+   "ru": "выключить",
+   "cat": 1
+  },
+  {
+   "id": "vytiratsya",
+   "ru": "вытираться",
+   "cat": 1
+  },
+  {
+   "id": "gotovit",
+   "ru": "готовить",
+   "cat": 1
+  },
+  {
+   "id": "gulyat",
+   "ru": "гулять",
+   "cat": 1
+  },
+  {
+   "id": "dat",
+   "ru": "дать",
+   "cat": 1
+  },
+  {
+   "id": "delat",
+   "ru": "делать",
+   "cat": 1
+  },
+  {
+   "id": "est",
+   "ru": "есть",
+   "cat": 1
+  },
+  {
+   "id": "ekhat",
+   "ru": "ехать",
+   "cat": 1
+  },
+  {
+   "id": "eshchyo",
+   "ru": "ещё",
+   "cat": 1
+  },
+  {
+   "id": "zhdat",
+   "ru": "ждать",
+   "cat": 1
+  },
+  {
+   "id": "zhevat",
+   "ru": "жевать",
+   "cat": 1
+  },
+  {
+   "id": "zakryt",
+   "ru": "закрыть",
+   "cat": 1
+  },
+  {
+   "id": "igrat",
+   "ru": "играть",
+   "cat": 1
+  },
+  {
+   "id": "idti",
+   "ru": "идти",
+   "cat": 1
+  },
+  {
+   "id": "katatsya",
+   "ru": "кататься",
+   "cat": 1
+  },
+  {
+   "id": "kachatsya",
+   "ru": "качаться",
+   "cat": 1
+  },
+  {
+   "id": "kleit",
+   "ru": "клеить",
+   "cat": 1
+  },
+  {
+   "id": "kupatsya",
+   "ru": "купаться",
+   "cat": 1
+  },
+  {
+   "id": "kusat",
+   "ru": "кусать",
+   "cat": 1
+  },
+  {
+   "id": "lezhat",
+   "ru": "лежать",
+   "cat": 1
+  },
+  {
+   "id": "lezt",
+   "ru": "лезть",
+   "cat": 1
+  },
+  {
+   "id": "lepit",
+   "ru": "лепить",
+   "cat": 1
+  },
+  {
+   "id": "myt_golovu",
+   "ru": "мыть голову",
+   "cat": 1
+  },
+  {
+   "id": "myt_posudu",
+   "ru": "мыть посуду",
+   "cat": 1
+  },
+  {
+   "id": "myt_ruki",
+   "ru": "мыть руки",
+   "cat": 1
+  },
+  {
+   "id": "ne_khochu",
+   "ru": "не хочу",
+   "cat": 1
+  },
+  {
+   "id": "nravitsya",
+   "ru": "нравиться",
+   "cat": 1
+  },
+  {
+   "id": "obnimat",
+   "ru": "обнимать",
+   "cat": 1
+  },
+  {
+   "id": "obuvatsya",
+   "ru": "обуваться",
+   "cat": 1
+  },
+  {
+   "id": "odevatsya",
+   "ru": "одеваться",
+   "cat": 1
+  },
+  {
+   "id": "ostanovitsya",
+   "ru": "остановиться",
+   "cat": 1
+  },
+  {
+   "id": "otkryt",
+   "ru": "открыть",
+   "cat": 1
+  },
+  {
+   "id": "pet",
+   "ru": "петь",
+   "cat": 1
+  },
+  {
+   "id": "pit",
+   "ru": "пить",
+   "cat": 1
+  },
+  {
+   "id": "plakat",
+   "ru": "плакать",
+   "cat": 1
+  },
+  {
+   "id": "povernut",
+   "ru": "повернуть",
+   "cat": 1
+  },
+  {
+   "id": "pokazat",
+   "ru": "показать",
+   "cat": 1
+  },
+  {
+   "id": "polozhit",
+   "ru": "положить",
+   "cat": 1
+  },
+  {
+   "id": "pomoch",
+   "ru": "помочь",
+   "cat": 1
+  },
+  {
+   "id": "prichyosyvatsya",
+   "ru": "причёсываться",
+   "cat": 1
+  },
+  {
+   "id": "prygat",
+   "ru": "прыгать",
+   "cat": 1
+  },
+  {
+   "id": "razdevatsya",
+   "ru": "раздеваться",
+   "cat": 1
+  },
+  {
+   "id": "rezat",
+   "ru": "резать",
+   "cat": 1
+  },
+  {
+   "id": "risovat",
+   "ru": "рисовать",
+   "cat": 1
+  },
+  {
+   "id": "sdelat",
+   "ru": "сделать",
+   "cat": 1
+  },
+  {
+   "id": "sidet",
+   "ru": "сидеть",
+   "cat": 1
+  },
+  {
+   "id": "slushat",
+   "ru": "слушать",
+   "cat": 1
+  },
+  {
+   "id": "smeyatsya",
+   "ru": "смеяться",
+   "cat": 1
+  },
+  {
+   "id": "smorkatsya",
+   "ru": "сморкаться",
+   "cat": 1
+  },
+  {
+   "id": "smotret",
+   "ru": "смотреть",
+   "cat": 1
+  },
+  {
+   "id": "sobirat",
+   "ru": "собирать",
+   "cat": 1
+  },
+  {
+   "id": "spat",
+   "ru": "спать",
+   "cat": 1
+  },
+  {
+   "id": "stoyat",
+   "ru": "стоять",
+   "cat": 1
+  },
+  {
+   "id": "stroit",
+   "ru": "строить",
+   "cat": 1
+  },
+  {
+   "id": "tantsevat",
+   "ru": "танцевать",
+   "cat": 1
+  },
+  {
+   "id": "ubirat",
+   "ru": "убирать",
+   "cat": 1
+  },
+  {
+   "id": "umyvatsya",
+   "ru": "умываться",
+   "cat": 1
+  },
+  {
+   "id": "khotet",
+   "ru": "хотеть",
+   "cat": 1
+  },
+  {
+   "id": "tselovat",
+   "ru": "целовать",
+   "cat": 1
+  },
+  {
+   "id": "chistit_zuby",
+   "ru": "чистить зубы",
+   "cat": 1
+  },
+  {
+   "id": "chitat",
+   "ru": "читать",
+   "cat": 1
+  },
+  {
+   "id": "batonchik",
+   "ru": "батончик",
+   "cat": 17
+  },
+  {
+   "id": "baursak",
+   "ru": "баурсак",
+   "cat": 17
+  },
+  {
+   "id": "beshbarmak",
+   "ru": "бешбармак",
+   "cat": 17
+  },
+  {
+   "id": "borshch",
+   "ru": "борщ",
+   "cat": 17
+  },
+  {
+   "id": "burger",
+   "ru": "бургер",
+   "cat": 17
+  },
+  {
+   "id": "buterbrod",
+   "ru": "бутерброд",
+   "cat": 17
+  },
+  {
+   "id": "vareniki",
+   "ru": "вареники",
+   "cat": 17
+  },
+  {
+   "id": "vafli",
+   "ru": "вафли",
+   "cat": 17
+  },
+  {
+   "id": "grechka",
+   "ru": "гречка",
+   "cat": 17
+  },
+  {
+   "id": "zefir",
+   "ru": "зефир",
+   "cat": 17
+  },
+  {
+   "id": "yogurt",
+   "ru": "йогурт",
+   "cat": 17
+  },
+  {
+   "id": "kartoshka",
+   "ru": "картошка",
+   "cat": 17
+  },
+  {
+   "id": "kasha",
+   "ru": "каша",
+   "cat": 17
+  },
+  {
+   "id": "keks",
+   "ru": "кекс",
+   "cat": 17
+  },
+  {
+   "id": "kirieshki",
+   "ru": "кириешки",
+   "cat": 17
+  },
+  {
+   "id": "kolbasa",
+   "ru": "колбаса",
+   "cat": 17
+  },
+  {
+   "id": "konfeta",
+   "ru": "конфета",
+   "cat": 17
+  },
+  {
+   "id": "kotleta",
+   "ru": "котлета",
+   "cat": 17
+  },
+  {
+   "id": "kreker",
+   "ru": "крекер",
+   "cat": 17
+  },
+  {
+   "id": "kukuruznye_palochki",
+   "ru": "кукурузные палочки",
+   "cat": 17
+  },
+  {
+   "id": "kuritsa",
+   "ru": "курица",
+   "cat": 17
+  },
+  {
+   "id": "lapsha",
+   "ru": "лапша",
+   "cat": 17
+  },
+  {
+   "id": "lepyoshka",
+   "ru": "лепёшка",
+   "cat": 17
+  },
+  {
+   "id": "makarony",
+   "ru": "макароны",
+   "cat": 17
+  },
+  {
+   "id": "manty",
+   "ru": "манты",
+   "cat": 17
+  },
+  {
+   "id": "marmelad",
+   "ru": "мармелад",
+   "cat": 17
+  },
+  {
+   "id": "morozhenoe",
+   "ru": "мороженое",
+   "cat": 17
+  },
+  {
+   "id": "myaso",
+   "ru": "мясо",
+   "cat": 17
+  },
+  {
+   "id": "omlet",
+   "ru": "омлет",
+   "cat": 17
+  },
+  {
+   "id": "pelmeni",
+   "ru": "пельмени",
+   "cat": 17
+  },
+  {
+   "id": "pechene",
+   "ru": "печенье",
+   "cat": 17
+  },
+  {
+   "id": "pirozhnoe",
+   "ru": "пирожное",
+   "cat": 17
+  },
+  {
+   "id": "pitstsa",
+   "ru": "пицца",
+   "cat": 17
+  },
+  {
+   "id": "plov",
+   "ru": "плов",
+   "cat": 17
+  },
+  {
+   "id": "ponchik",
+   "ru": "пончик",
+   "cat": 17
+  },
+  {
+   "id": "popkorn",
+   "ru": "попкорн",
+   "cat": 17
+  },
+  {
+   "id": "pyure",
+   "ru": "пюре",
+   "cat": 17
+  },
+  {
+   "id": "ris",
+   "ru": "рис",
+   "cat": 17
+  },
+  {
+   "id": "ryba",
+   "ru": "рыба",
+   "cat": 17
+  },
+  {
+   "id": "salat",
+   "ru": "салат",
+   "cat": 17
+  },
+  {
+   "id": "samsa",
+   "ru": "самса",
+   "cat": 17
+  },
+  {
+   "id": "sosiska",
+   "ru": "сосиска",
+   "cat": 17
+  },
+  {
+   "id": "sup",
+   "ru": "суп",
+   "cat": 17
+  },
+  {
+   "id": "sukhariki",
+   "ru": "сухарики",
+   "cat": 17
+  },
+  {
+   "id": "syr",
+   "ru": "сыр",
+   "cat": 17
+  },
+  {
+   "id": "syrok",
+   "ru": "сырок",
+   "cat": 17
+  },
+  {
+   "id": "tvorozhok",
+   "ru": "творожок",
+   "cat": 17
+  },
+  {
+   "id": "tort",
+   "ru": "торт",
+   "cat": 17
+  },
+  {
+   "id": "fruktovoe_pyure",
+   "ru": "фруктовое пюре",
+   "cat": 17
+  },
+  {
+   "id": "khalva",
+   "ru": "халва",
+   "cat": 17
+  },
+  {
+   "id": "khleb",
+   "ru": "хлеб",
+   "cat": 17
+  },
+  {
+   "id": "khlebets",
+   "ru": "хлебец",
+   "cat": 17
+  },
+  {
+   "id": "chipsy",
+   "ru": "чипсы",
+   "cat": 17
+  },
+  {
+   "id": "shokolad",
+   "ru": "шоколад",
+   "cat": 17
+  },
+  {
+   "id": "yaytso",
+   "ru": "яйцо",
+   "cat": 17
+  },
+  {
+   "id": "baklazhan",
+   "ru": "баклажан",
+   "cat": 18
+  },
+  {
+   "id": "brokkoli",
+   "ru": "брокколи",
+   "cat": 18
+  },
+  {
+   "id": "gorokh",
+   "ru": "горох",
+   "cat": 18
+  },
+  {
+   "id": "griby",
+   "ru": "грибы",
+   "cat": 18
+  },
+  {
+   "id": "zelen",
+   "ru": "зелень",
+   "cat": 18
+  },
+  {
+   "id": "kabachok",
+   "ru": "кабачок",
+   "cat": 18
+  },
+  {
+   "id": "kapusta",
+   "ru": "капуста",
+   "cat": 18
+  },
+  {
+   "id": "kartofel",
+   "ru": "картофель",
+   "cat": 18
+  },
+  {
+   "id": "kukuruza",
+   "ru": "кукуруза",
+   "cat": 18
+  },
+  {
+   "id": "luk",
+   "ru": "лук",
+   "cat": 18
+  },
+  {
+   "id": "morkov",
+   "ru": "морковь",
+   "cat": 18
+  },
+  {
+   "id": "ogurets",
+   "ru": "огурец",
+   "cat": 18
+  },
+  {
+   "id": "perets",
+   "ru": "перец",
+   "cat": 18
+  },
+  {
+   "id": "petrushka",
+   "ru": "петрушка",
+   "cat": 18
+  },
+  {
+   "id": "pomidor",
+   "ru": "помидор",
+   "cat": 18
+  },
+  {
+   "id": "redis",
+   "ru": "редис",
+   "cat": 18
+  },
+  {
+   "id": "salat_listovoy",
+   "ru": "салат листовой",
+   "cat": 18
+  },
+  {
+   "id": "svyokla",
+   "ru": "свёкла",
+   "cat": 18
+  },
+  {
+   "id": "tykva",
+   "ru": "тыква",
+   "cat": 18
+  },
+  {
+   "id": "ukrop",
+   "ru": "укроп",
+   "cat": 18
+  },
+  {
+   "id": "fasol",
+   "ru": "фасоль",
+   "cat": 18
+  },
+  {
+   "id": "tsvetnaya_kapusta",
+   "ru": "цветная капуста",
+   "cat": 18
+  },
+  {
+   "id": "chesnok",
+   "ru": "чеснок",
+   "cat": 18
+  },
+  {
+   "id": "abrikos",
+   "ru": "абрикос",
+   "cat": 19
+  },
+  {
+   "id": "avokado",
+   "ru": "авокадо",
+   "cat": 19
+  },
+  {
+   "id": "ananas",
+   "ru": "ананас",
+   "cat": 19
+  },
+  {
+   "id": "apelsin",
+   "ru": "апельсин",
+   "cat": 19
+  },
+  {
+   "id": "arbuz",
+   "ru": "арбуз",
+   "cat": 19
+  },
+  {
+   "id": "banan",
+   "ru": "банан",
+   "cat": 19
+  },
+  {
+   "id": "vinograd",
+   "ru": "виноград",
+   "cat": 19
+  },
+  {
+   "id": "granat",
+   "ru": "гранат",
+   "cat": 19
+  },
+  {
+   "id": "greypfrut",
+   "ru": "грейпфрут",
+   "cat": 19
+  },
+  {
+   "id": "grusha",
+   "ru": "груша",
+   "cat": 19
+  },
+  {
+   "id": "dynya",
+   "ru": "дыня",
+   "cat": 19
+  },
+  {
+   "id": "inzhir",
+   "ru": "инжир",
+   "cat": 19
+  },
+  {
+   "id": "kivi",
+   "ru": "киви",
+   "cat": 19
+  },
+  {
+   "id": "limon",
+   "ru": "лимон",
+   "cat": 19
+  },
+  {
+   "id": "mango",
+   "ru": "манго",
+   "cat": 19
+  },
+  {
+   "id": "mandarin",
+   "ru": "мандарин",
+   "cat": 19
+  },
+  {
+   "id": "nektarin",
+   "ru": "нектарин",
+   "cat": 19
+  },
+  {
+   "id": "persik",
+   "ru": "персик",
+   "cat": 19
+  },
+  {
+   "id": "sliva",
+   "ru": "слива",
+   "cat": 19
+  },
+  {
+   "id": "khurma",
+   "ru": "хурма",
+   "cat": 19
+  },
+  {
+   "id": "yabloko",
+   "ru": "яблоко",
+   "cat": 19
+  },
+  {
+   "id": "brusnika",
+   "ru": "брусника",
+   "cat": 20
+  },
+  {
+   "id": "vishnya",
+   "ru": "вишня",
+   "cat": 20
+  },
+  {
+   "id": "golubika",
+   "ru": "голубика",
+   "cat": 20
+  },
+  {
+   "id": "ezhevika",
+   "ru": "ежевика",
+   "cat": 20
+  },
+  {
+   "id": "zemlyanika",
+   "ru": "земляника",
+   "cat": 20
+  },
+  {
+   "id": "klubnika",
+   "ru": "клубника",
+   "cat": 20
+  },
+  {
+   "id": "klyukva",
+   "ru": "клюква",
+   "cat": 20
+  },
+  {
+   "id": "kryzhovnik",
+   "ru": "крыжовник",
+   "cat": 20
+  },
+  {
+   "id": "malina",
+   "ru": "малина",
+   "cat": 20
+  },
+  {
+   "id": "oblepikha",
+   "ru": "облепиха",
+   "cat": 20
+  },
+  {
+   "id": "smorodina",
+   "ru": "смородина",
+   "cat": 20
+  },
+  {
+   "id": "chereshnya",
+   "ru": "черешня",
+   "cat": 20
+  },
+  {
+   "id": "chernika",
+   "ru": "черника",
+   "cat": 20
+  },
+  {
+   "id": "ayran",
+   "ru": "айран",
+   "cat": 21
+  },
+  {
+   "id": "voda",
+   "ru": "вода",
+   "cat": 21
+  },
+  {
+   "id": "gazirovka",
+   "ru": "газировка",
+   "cat": 21
+  },
+  {
+   "id": "goryachiy_shokolad",
+   "ru": "горячий шоколад",
+   "cat": 21
+  },
+  {
+   "id": "kakao",
+   "ru": "какао",
+   "cat": 21
+  },
+  {
+   "id": "kvas",
+   "ru": "квас",
+   "cat": 21
+  },
+  {
+   "id": "kefir",
+   "ru": "кефир",
+   "cat": 21
+  },
+  {
+   "id": "kisel",
+   "ru": "кисель",
+   "cat": 21
+  },
+  {
+   "id": "kompot",
+   "ru": "компот",
+   "cat": 21
+  },
+  {
+   "id": "kofe",
+   "ru": "кофе",
+   "cat": 21
+  },
+  {
+   "id": "limonad",
+   "ru": "лимонад",
+   "cat": 21
+  },
+  {
+   "id": "mineralka",
+   "ru": "минералка",
+   "cat": 21
+  },
+  {
+   "id": "moloko",
+   "ru": "молоко",
+   "cat": 21
+  },
+  {
+   "id": "mors",
+   "ru": "морс",
+   "cat": 21
+  },
+  {
+   "id": "smuzi",
+   "ru": "смузи",
+   "cat": 21
+  },
+  {
+   "id": "sok",
+   "ru": "сок",
+   "cat": 21
+  },
+  {
+   "id": "uzvar",
+   "ru": "узвар",
+   "cat": 21
+  },
+  {
+   "id": "chay",
+   "ru": "чай",
+   "cat": 21
+  },
+  {
+   "id": "veshalka",
+   "ru": "вешалка",
+   "cat": 23
+  },
+  {
+   "id": "detskaya_krovatka",
+   "ru": "детская кроватка",
+   "cat": 23
+  },
+  {
+   "id": "detskiy_stul",
+   "ru": "детский стул",
+   "cat": 23
+  },
+  {
+   "id": "divan",
+   "ru": "диван",
+   "cat": 23
+  },
+  {
+   "id": "zerkalo",
+   "ru": "зеркало",
+   "cat": 23
+  },
+  {
+   "id": "kovyor",
+   "ru": "ковёр",
+   "cat": 23
+  },
+  {
+   "id": "komod",
+   "ru": "комод",
+   "cat": 23
+  },
+  {
+   "id": "kreslo",
+   "ru": "кресло",
+   "cat": 23
+  },
+  {
+   "id": "krovat",
+   "ru": "кровать",
+   "cat": 23
+  },
+  {
+   "id": "pismennyy_stol",
+   "ru": "письменный стол",
+   "cat": 23
+  },
+  {
+   "id": "polka",
+   "ru": "полка",
+   "cat": 23
+  },
+  {
+   "id": "polka_dlya_obuvi",
+   "ru": "полка для обуви",
+   "cat": 23
+  },
+  {
+   "id": "pufik",
+   "ru": "пуфик",
+   "cat": 23
+  },
+  {
+   "id": "skameyka",
+   "ru": "скамейка",
+   "cat": 23
+  },
+  {
+   "id": "stol",
+   "ru": "стол",
+   "cat": 23
+  },
+  {
+   "id": "stul",
+   "ru": "стул",
+   "cat": 23
+  },
+  {
+   "id": "taburet",
+   "ru": "табурет",
+   "cat": 23
+  },
+  {
+   "id": "tumbochka",
+   "ru": "тумбочка",
+   "cat": 23
+  },
+  {
+   "id": "shkaf",
+   "ru": "шкаф",
+   "cat": 23
+  },
+  {
+   "id": "shtory",
+   "ru": "шторы",
+   "cat": 23
+  },
+  {
+   "id": "butylka",
+   "ru": "бутылка",
+   "cat": 24
+  },
+  {
+   "id": "vilka",
+   "ru": "вилка",
+   "cat": 24
+  },
+  {
+   "id": "doska",
+   "ru": "доска",
+   "cat": 24
+  },
+  {
+   "id": "kastryulya",
+   "ru": "кастрюля",
+   "cat": 24
+  },
+  {
+   "id": "konteyner",
+   "ru": "контейнер",
+   "cat": 24
+  },
+  {
+   "id": "kruzhka",
+   "ru": "кружка",
+   "cat": 24
+  },
+  {
+   "id": "kryshka",
+   "ru": "крышка",
+   "cat": 24
+  },
+  {
+   "id": "lozhka",
+   "ru": "ложка",
+   "cat": 24
+  },
+  {
+   "id": "lopatka",
+   "ru": "лопатка",
+   "cat": 24
+  },
+  {
+   "id": "miska",
+   "ru": "миска",
+   "cat": 24
+  },
+  {
+   "id": "nozh",
+   "ru": "нож",
+   "cat": 24
+  },
+  {
+   "id": "otkryvalka",
+   "ru": "открывалка",
+   "cat": 24
+  },
+  {
+   "id": "podnos",
+   "ru": "поднос",
+   "cat": 24
+  },
+  {
+   "id": "polovnik",
+   "ru": "половник",
+   "cat": 24
+  },
+  {
+   "id": "salfetka",
+   "ru": "салфетка",
+   "cat": 24
+  },
+  {
+   "id": "sito",
+   "ru": "сито",
+   "cat": 24
+  },
+  {
+   "id": "skovoroda",
+   "ru": "сковорода",
+   "cat": 24
+  },
+  {
+   "id": "stakan",
+   "ru": "стакан",
+   "cat": 24
+  },
+  {
+   "id": "tarelka",
+   "ru": "тарелка",
+   "cat": 24
+  },
+  {
+   "id": "termos",
+   "ru": "термос",
+   "cat": 24
+  },
+  {
+   "id": "chaynik",
+   "ru": "чайник",
+   "cat": 24
+  },
+  {
+   "id": "blender",
+   "ru": "блендер",
+   "cat": 25
+  },
+  {
+   "id": "ventilyator",
+   "ru": "вентилятор",
+   "cat": 25
+  },
+  {
+   "id": "dukhovka",
+   "ru": "духовка",
+   "cat": 25
+  },
+  {
+   "id": "konditsioner",
+   "ru": "кондиционер",
+   "cat": 25
+  },
+  {
+   "id": "lampa",
+   "ru": "лампа",
+   "cat": 25
+  },
+  {
+   "id": "mikrovolnovka",
+   "ru": "микроволновка",
+   "cat": 25
+  },
+  {
+   "id": "mikser",
+   "ru": "миксер",
+   "cat": 25
+  },
+  {
+   "id": "morozilka",
+   "ru": "морозилка",
+   "cat": 25
+  },
+  {
+   "id": "obogrevatel",
+   "ru": "обогреватель",
+   "cat": 25
+  },
+  {
+   "id": "plita",
+   "ru": "плита",
+   "cat": 25
+  },
+  {
+   "id": "posudomoyka",
+   "ru": "посудомойка",
+   "cat": 25
+  },
+  {
+   "id": "pylesos",
+   "ru": "пылесос",
+   "cat": 25
+  },
+  {
+   "id": "svetilnik",
+   "ru": "светильник",
+   "cat": 25
+  },
+  {
+   "id": "stiralnaya_mashina",
+   "ru": "стиральная машина",
+   "cat": 25
+  },
+  {
+   "id": "toster",
+   "ru": "тостер",
+   "cat": 25
+  },
+  {
+   "id": "utyug",
+   "ru": "утюг",
+   "cat": 25
+  },
+  {
+   "id": "fen",
+   "ru": "фен",
+   "cat": 25
+  },
+  {
+   "id": "kholodilnik",
+   "ru": "холодильник",
+   "cat": 25
+  },
+  {
+   "id": "chaynik_elektricheskiy",
+   "ru": "чайник электрический",
+   "cat": 25
+  },
+  {
+   "id": "batareyka",
+   "ru": "батарейка",
+   "cat": 26
+  },
+  {
+   "id": "venik",
+   "ru": "веник",
+   "cat": 26
+  },
+  {
+   "id": "veryovka",
+   "ru": "верёвка",
+   "cat": 26
+  },
+  {
+   "id": "povsednevnye_predmety_veshalka",
+   "ru": "вешалка",
+   "cat": 26
+  },
+  {
+   "id": "gubka",
+   "ru": "губка",
+   "cat": 26
+  },
+  {
+   "id": "zaryadka",
+   "ru": "зарядка",
+   "cat": 26
+  },
+  {
+   "id": "zont",
+   "ru": "зонт",
+   "cat": 26
+  },
+  {
+   "id": "klyuch",
+   "ru": "ключ",
+   "cat": 26
+  },
+  {
+   "id": "korobka",
+   "ru": "коробка",
+   "cat": 26
+  },
+  {
+   "id": "koshelyok",
+   "ru": "кошелёк",
+   "cat": 26
+  },
+  {
+   "id": "musornoe_vedro",
+   "ru": "мусорное ведро",
+   "cat": 26
+  },
+  {
+   "id": "naushniki",
+   "ru": "наушники",
+   "cat": 26
+  },
+  {
+   "id": "nozhnitsy",
+   "ru": "ножницы",
+   "cat": 26
+  },
+  {
+   "id": "paket",
+   "ru": "пакет",
+   "cat": 26
+  },
+  {
+   "id": "prishchepka",
+   "ru": "прищепка",
+   "cat": 26
+  },
+  {
+   "id": "pult",
+   "ru": "пульт",
+   "cat": 26
+  },
+  {
+   "id": "skotch",
+   "ru": "скотч",
+   "cat": 26
+  },
+  {
+   "id": "sovok",
+   "ru": "совок",
+   "cat": 26
+  },
+  {
+   "id": "sumka",
+   "ru": "сумка",
+   "cat": 26
+  },
+  {
+   "id": "telefon",
+   "ru": "телефон",
+   "cat": 26
+  },
+  {
+   "id": "tryapka",
+   "ru": "тряпка",
+   "cat": 26
+  },
+  {
+   "id": "fonarik",
+   "ru": "фонарик",
+   "cat": 26
+  },
+  {
+   "id": "youtube",
+   "ru": "YouTube",
+   "cat": 27
+  },
+  {
+   "id": "video",
+   "ru": "видео",
+   "cat": 27
+  },
+  {
+   "id": "vyklyuchit_ekran",
+   "ru": "выключить экран",
+   "cat": 27
+  },
+  {
+   "id": "eshchyo_seriyu",
+   "ru": "ещё серию",
+   "cat": 27
+  },
+  {
+   "id": "zakonchit_multik",
+   "ru": "закончить мультик",
+   "cat": 27
+  },
+  {
+   "id": "gadzhety_i_ekrany_zaryadka",
+   "ru": "зарядка",
+   "cat": 27
+  },
+  {
+   "id": "kamera",
+   "ru": "камера",
+   "cat": 27
+  },
+  {
+   "id": "klaviatura",
+   "ru": "клавиатура",
+   "cat": 27
+  },
+  {
+   "id": "kolonka",
+   "ru": "колонка",
+   "cat": 27
+  },
+  {
+   "id": "kompyuter",
+   "ru": "компьютер",
+   "cat": 27
+  },
+  {
+   "id": "mikrofon",
+   "ru": "микрофон",
+   "cat": 27
+  },
+  {
+   "id": "monitor",
+   "ru": "монитор",
+   "cat": 27
+  },
+  {
+   "id": "multik",
+   "ru": "мультик",
+   "cat": 27
+  },
+  {
+   "id": "mysh",
+   "ru": "мышь",
+   "cat": 27
+  },
+  {
+   "id": "gadzhety_i_ekrany_naushniki",
+   "ru": "наушники",
+   "cat": 27
+  },
+  {
+   "id": "noutbuk",
+   "ru": "ноутбук",
+   "cat": 27
+  },
+  {
+   "id": "planshet",
+   "ru": "планшет",
+   "cat": 27
+  },
+  {
+   "id": "pristavka",
+   "ru": "приставка",
+   "cat": 27
+  },
+  {
+   "id": "gadzhety_i_ekrany_pult",
+   "ru": "пульт",
+   "cat": 27
+  },
+  {
+   "id": "smartfon",
+   "ru": "смартфон",
+   "cat": 27
+  },
+  {
+   "id": "televizor",
+   "ru": "телевизор",
+   "cat": 27
+  },
+  {
+   "id": "gadzhety_i_ekrany_telefon",
+   "ru": "телефон",
+   "cat": 27
+  },
+  {
+   "id": "baraban",
+   "ru": "барабан",
+   "cat": 35
+  },
+  {
+   "id": "vozdushnyy_zmey",
+   "ru": "воздушный змей",
+   "cat": 35
+  },
+  {
+   "id": "gruzovik",
+   "ru": "грузовик",
+   "cat": 35
+  },
+  {
+   "id": "dinozavr",
+   "ru": "динозавр",
+   "cat": 35
+  },
+  {
+   "id": "zayats",
+   "ru": "заяц",
+   "cat": 35
+  },
+  {
+   "id": "igrushechnyy_telefon",
+   "ru": "игрушечный телефон",
+   "cat": 35
+  },
+  {
+   "id": "kassa_igrushechnaya",
+   "ru": "касса игрушечная",
+   "cat": 35
+  },
+  {
+   "id": "konstruktor",
+   "ru": "конструктор",
+   "cat": 35
+  },
+  {
+   "id": "korablik",
+   "ru": "кораблик",
+   "cat": 35
+  },
+  {
+   "id": "kubiki",
+   "ru": "кубики",
+   "cat": 35
+  },
+  {
+   "id": "kukla",
+   "ru": "кукла",
+   "cat": 35
+  },
+  {
+   "id": "kukhnya_igrushechnaya",
+   "ru": "кухня игрушечная",
+   "cat": 35
+  },
+  {
+   "id": "mashinka",
+   "ru": "машинка",
+   "cat": 35
+  },
+  {
+   "id": "mishka",
+   "ru": "мишка",
+   "cat": 35
+  },
+  {
+   "id": "mozaika",
+   "ru": "мозаика",
+   "cat": 35
+  },
+  {
+   "id": "myach",
+   "ru": "мяч",
+   "cat": 35
+  },
+  {
+   "id": "nevalyashka",
+   "ru": "неваляшка",
+   "cat": 35
+  },
+  {
+   "id": "pazl",
+   "ru": "пазл",
+   "cat": 35
+  },
+  {
+   "id": "piramidka",
+   "ru": "пирамидка",
+   "cat": 35
+  },
+  {
+   "id": "poezd",
+   "ru": "поезд",
+   "cat": 35
+  },
+  {
+   "id": "poprygunchik",
+   "ru": "попрыгунчик",
+   "cat": 35
+  },
+  {
+   "id": "robot",
+   "ru": "робот",
+   "cat": 35
+  },
+  {
+   "id": "samolyot",
+   "ru": "самолёт",
+   "cat": 35
+  },
+  {
+   "id": "skakalka",
+   "ru": "скакалка",
+   "cat": 35
+  },
+  {
+   "id": "sorter",
+   "ru": "сортер",
+   "cat": 35
+  },
+  {
+   "id": "yula",
+   "ru": "юла",
+   "cat": 35
+  },
+  {
+   "id": "akvariumnaya_rybka",
+   "ru": "аквариумная рыбка",
+   "cat": 40
+  },
+  {
+   "id": "byk",
+   "ru": "бык",
+   "cat": 40
+  },
+  {
+   "id": "verblyud",
+   "ru": "верблюд",
+   "cat": 40
+  },
+  {
+   "id": "verblyuzhonok",
+   "ru": "верблюжонок",
+   "cat": 40
+  },
+  {
+   "id": "gus",
+   "ru": "гусь",
+   "cat": 40
+  },
+  {
+   "id": "zherebyonok",
+   "ru": "жеребёнок",
+   "cat": 40
+  },
+  {
+   "id": "koza",
+   "ru": "коза",
+   "cat": 40
+  },
+  {
+   "id": "kozlyonok",
+   "ru": "козлёнок",
+   "cat": 40
+  },
+  {
+   "id": "korova",
+   "ru": "корова",
+   "cat": 40
+  },
+  {
+   "id": "kot",
+   "ru": "кот",
+   "cat": 40
+  },
+  {
+   "id": "kotyonok",
+   "ru": "котёнок",
+   "cat": 40
+  },
+  {
+   "id": "koshka",
+   "ru": "кошка",
+   "cat": 40
+  },
+  {
+   "id": "krolik",
+   "ru": "кролик",
+   "cat": 40
+  },
+  {
+   "id": "domashnie_zhivotnye_kuritsa",
+   "ru": "курица",
+   "cat": 40
+  },
+  {
+   "id": "loshad",
+   "ru": "лошадь",
+   "cat": 40
+  },
+  {
+   "id": "morskaya_svinka",
+   "ru": "морская свинка",
+   "cat": 40
+  },
+  {
+   "id": "ovtsa",
+   "ru": "овца",
+   "cat": 40
+  },
+  {
+   "id": "petukh",
+   "ru": "петух",
+   "cat": 40
+  },
+  {
+   "id": "popugay_domashniy",
+   "ru": "попугай домашний",
+   "cat": 40
+  },
+  {
+   "id": "porosyonok",
+   "ru": "поросёнок",
+   "cat": 40
+  },
+  {
+   "id": "svinya",
+   "ru": "свинья",
+   "cat": 40
+  },
+  {
+   "id": "sobaka",
+   "ru": "собака",
+   "cat": 40
+  },
+  {
+   "id": "telyonok",
+   "ru": "телёнок",
+   "cat": 40
+  },
+  {
+   "id": "utka",
+   "ru": "утка",
+   "cat": 40
+  },
+  {
+   "id": "khomyak",
+   "ru": "хомяк",
+   "cat": 40
+  },
+  {
+   "id": "tsyplyonok",
+   "ru": "цыплёнок",
+   "cat": 40
+  },
+  {
+   "id": "cherepakha_domashnyaya",
+   "ru": "черепаха домашняя",
+   "cat": 40
+  },
+  {
+   "id": "shchenok",
+   "ru": "щенок",
+   "cat": 40
+  },
+  {
+   "id": "yagnyonok",
+   "ru": "ягнёнок",
+   "cat": 40
+  },
+  {
+   "id": "barsuk",
+   "ru": "барсук",
+   "cat": 41
+  },
+  {
+   "id": "begemot",
+   "ru": "бегемот",
+   "cat": 41
+  },
+  {
+   "id": "belka",
+   "ru": "белка",
+   "cat": 41
+  },
+  {
+   "id": "dikie_zhivotnye_verblyud",
+   "ru": "верблюд",
+   "cat": 41
+  },
+  {
+   "id": "volk",
+   "ru": "волк",
+   "cat": 41
+  },
+  {
+   "id": "zhiraf",
+   "ru": "жираф",
+   "cat": 41
+  },
+  {
+   "id": "dikie_zhivotnye_zayats",
+   "ru": "заяц",
+   "cat": 41
+  },
+  {
+   "id": "zebra",
+   "ru": "зебра",
+   "cat": 41
+  },
+  {
+   "id": "kaban",
+   "ru": "кабан",
+   "cat": 41
+  },
+  {
+   "id": "kenguru",
+   "ru": "кенгуру",
+   "cat": 41
+  },
+  {
+   "id": "kosulya",
+   "ru": "косуля",
+   "cat": 41
+  },
+  {
+   "id": "lev",
+   "ru": "лев",
+   "cat": 41
+  },
+  {
+   "id": "lisa",
+   "ru": "лиса",
+   "cat": 41
+  },
+  {
+   "id": "los",
+   "ru": "лось",
+   "cat": 41
+  },
+  {
+   "id": "medved",
+   "ru": "медведь",
+   "cat": 41
+  },
+  {
+   "id": "nosorog",
+   "ru": "носорог",
+   "cat": 41
+  },
+  {
+   "id": "obezyana",
+   "ru": "обезьяна",
+   "cat": 41
+  },
+  {
+   "id": "olen",
+   "ru": "олень",
+   "cat": 41
+  },
+  {
+   "id": "panda",
+   "ru": "панда",
+   "cat": 41
+  },
+  {
+   "id": "rys",
+   "ru": "рысь",
+   "cat": 41
+  },
+  {
+   "id": "saygak",
+   "ru": "сайгак",
+   "cat": 41
+  },
+  {
+   "id": "slon",
+   "ru": "слон",
+   "cat": 41
+  },
+  {
+   "id": "snezhnyy_bars",
+   "ru": "снежный барс",
+   "cat": 41
+  },
+  {
+   "id": "suslik",
+   "ru": "суслик",
+   "cat": 41
+  },
+  {
+   "id": "tigr",
+   "ru": "тигр",
+   "cat": 41
+  },
+  {
+   "id": "tushkanchik",
+   "ru": "тушканчик",
+   "cat": 41
+  },
+  {
+   "id": "yozh",
+   "ru": "ёж",
+   "cat": 41
+  },
+  {
+   "id": "akula",
+   "ru": "акула",
+   "cat": 42
+  },
+  {
+   "id": "delfin",
+   "ru": "дельфин",
+   "cat": 42
+  },
+  {
+   "id": "kalmar",
+   "ru": "кальмар",
+   "cat": 42
+  },
+  {
+   "id": "kit",
+   "ru": "кит",
+   "cat": 42
+  },
+  {
+   "id": "korall",
+   "ru": "коралл",
+   "cat": 42
+  },
+  {
+   "id": "kosatka",
+   "ru": "косатка",
+   "cat": 42
+  },
+  {
+   "id": "krab",
+   "ru": "краб",
+   "cat": 42
+  },
+  {
+   "id": "krevetka",
+   "ru": "креветка",
+   "cat": 42
+  },
+  {
+   "id": "meduza",
+   "ru": "медуза",
+   "cat": 42
+  },
+  {
+   "id": "morzh",
+   "ru": "морж",
+   "cat": 42
+  },
+  {
+   "id": "morskaya_zvezda",
+   "ru": "морская звезда",
+   "cat": 42
+  },
+  {
+   "id": "morskoy_konyok",
+   "ru": "морской конёк",
+   "cat": 42
+  },
+  {
+   "id": "omar",
+   "ru": "омар",
+   "cat": 42
+  },
+  {
+   "id": "osminog",
+   "ru": "осьминог",
+   "cat": 42
+  },
+  {
+   "id": "morskie_zhivotnye_ryba",
+   "ru": "рыба",
+   "cat": 42
+  },
+  {
+   "id": "skat",
+   "ru": "скат",
+   "cat": 42
+  },
+  {
+   "id": "tyulen",
+   "ru": "тюлень",
+   "cat": 42
+  },
+  {
+   "id": "cherepakha_morskaya",
+   "ru": "черепаха морская",
+   "cat": 42
+  },
+  {
+   "id": "aist",
+   "ru": "аист",
+   "cat": 43
+  },
+  {
+   "id": "vorobey",
+   "ru": "воробей",
+   "cat": 43
+  },
+  {
+   "id": "vorona",
+   "ru": "ворона",
+   "cat": 43
+  },
+  {
+   "id": "golub",
+   "ru": "голубь",
+   "cat": 43
+  },
+  {
+   "id": "gus_dikiy",
+   "ru": "гусь дикий",
+   "cat": 43
+  },
+  {
+   "id": "dyatel",
+   "ru": "дятел",
+   "cat": 43
+  },
+  {
+   "id": "indyuk",
+   "ru": "индюк",
+   "cat": 43
+  },
+  {
+   "id": "kukushka",
+   "ru": "кукушка",
+   "cat": 43
+  },
+  {
+   "id": "lebed",
+   "ru": "лебедь",
+   "cat": 43
+  },
+  {
+   "id": "oryol",
+   "ru": "орёл",
+   "cat": 43
+  },
+  {
+   "id": "pavlin",
+   "ru": "павлин",
+   "cat": 43
+  },
+  {
+   "id": "pingvin",
+   "ru": "пингвин",
+   "cat": 43
+  },
+  {
+   "id": "popugay",
+   "ru": "попугай",
+   "cat": 43
+  },
+  {
+   "id": "sinitsa",
+   "ru": "синица",
+   "cat": 43
+  },
+  {
+   "id": "snegir",
+   "ru": "снегирь",
+   "cat": 43
+  },
+  {
+   "id": "sova",
+   "ru": "сова",
+   "cat": 43
+  },
+  {
+   "id": "soroka",
+   "ru": "сорока",
+   "cat": 43
+  },
+  {
+   "id": "utka_dikaya",
+   "ru": "утка дикая",
+   "cat": 43
+  },
+  {
+   "id": "flamingo",
+   "ru": "фламинго",
+   "cat": 43
+  },
+  {
+   "id": "chayka",
+   "ru": "чайка",
+   "cat": 43
+  },
+  {
+   "id": "babochka",
+   "ru": "бабочка",
+   "cat": 44
+  },
+  {
+   "id": "bogomol",
+   "ru": "богомол",
+   "cat": 44
+  },
+  {
+   "id": "bozhya_korovka",
+   "ru": "божья коровка",
+   "cat": 44
+  },
+  {
+   "id": "gusenitsa",
+   "ru": "гусеница",
+   "cat": 44
+  },
+  {
+   "id": "zhuk",
+   "ru": "жук",
+   "cat": 44
+  },
+  {
+   "id": "komar",
+   "ru": "комар",
+   "cat": 44
+  },
+  {
+   "id": "kuznechik",
+   "ru": "кузнечик",
+   "cat": 44
+  },
+  {
+   "id": "motylyok",
+   "ru": "мотылёк",
+   "cat": 44
+  },
+  {
+   "id": "muravey",
+   "ru": "муравей",
+   "cat": 44
+  },
+  {
+   "id": "mukha",
+   "ru": "муха",
+   "cat": 44
+  },
+  {
+   "id": "osa",
+   "ru": "оса",
+   "cat": 44
+  },
+  {
+   "id": "pauk",
+   "ru": "паук",
+   "cat": 44
+  },
+  {
+   "id": "pchela",
+   "ru": "пчела",
+   "cat": 44
+  },
+  {
+   "id": "svetlyachok",
+   "ru": "светлячок",
+   "cat": 44
+  },
+  {
+   "id": "strekoza",
+   "ru": "стрекоза",
+   "cat": 44
+  },
+  {
+   "id": "tarakan",
+   "ru": "таракан",
+   "cat": 44
+  },
+  {
+   "id": "ulitka",
+   "ru": "улитка",
+   "cat": 44
+  },
+  {
+   "id": "chervyak",
+   "ru": "червяк",
+   "cat": 44
+  },
+  {
+   "id": "gora",
+   "ru": "гора",
+   "cat": 45
+  },
+  {
+   "id": "derevo",
+   "ru": "дерево",
+   "cat": 45
+  },
+  {
+   "id": "zvezda",
+   "ru": "звезда",
+   "cat": 45
+  },
+  {
+   "id": "zemlya",
+   "ru": "земля",
+   "cat": 45
+  },
+  {
+   "id": "kamen",
+   "ru": "камень",
+   "cat": 45
+  },
+  {
+   "id": "kust",
+   "ru": "куст",
+   "cat": 45
+  },
+  {
+   "id": "les",
+   "ru": "лес",
+   "cat": 45
+  },
+  {
+   "id": "list",
+   "ru": "лист",
+   "cat": 45
+  },
+  {
+   "id": "luna",
+   "ru": "луна",
+   "cat": 45
+  },
+  {
+   "id": "more",
+   "ru": "море",
+   "cat": 45
+  },
+  {
+   "id": "nebo",
+   "ru": "небо",
+   "cat": 45
+  },
+  {
+   "id": "oblako",
+   "ru": "облако",
+   "cat": 45
+  },
+  {
+   "id": "ozero",
+   "ru": "озеро",
+   "cat": 45
+  },
+  {
+   "id": "pesok",
+   "ru": "песок",
+   "cat": 45
+  },
+  {
+   "id": "pole",
+   "ru": "поле",
+   "cat": 45
+  },
+  {
+   "id": "raduga",
+   "ru": "радуга",
+   "cat": 45
+  },
+  {
+   "id": "reka",
+   "ru": "река",
+   "cat": 45
+  },
+  {
+   "id": "solntse",
+   "ru": "солнце",
+   "cat": 45
+  },
+  {
+   "id": "trava",
+   "ru": "трава",
+   "cat": 45
+  },
+  {
+   "id": "kholm",
+   "ru": "холм",
+   "cat": 45
+  },
+  {
+   "id": "gvozdika",
+   "ru": "гвоздика",
+   "cat": 46
+  },
+  {
+   "id": "gorshok_dlya_tsvetov",
+   "ru": "горшок для цветов",
+   "cat": 46
+  },
+  {
+   "id": "derevo_plodovoe",
+   "ru": "дерево плодовое",
+   "cat": 46
+  },
+  {
+   "id": "kaktus",
+   "ru": "кактус",
+   "cat": 46
+  },
+  {
+   "id": "kolokolchik",
+   "ru": "колокольчик",
+   "cat": 46
+  },
+  {
+   "id": "komnatnyy_tsvetok",
+   "ru": "комнатный цветок",
+   "cat": 46
+  },
+  {
+   "id": "liliya",
+   "ru": "лилия",
+   "cat": 46
+  },
+  {
+   "id": "mak",
+   "ru": "мак",
+   "cat": 46
+  },
+  {
+   "id": "nartsiss",
+   "ru": "нарцисс",
+   "cat": 46
+  },
+  {
+   "id": "orkhideya",
+   "ru": "орхидея",
+   "cat": 46
+  },
+  {
+   "id": "pion",
+   "ru": "пион",
+   "cat": 46
+  },
+  {
+   "id": "podsolnukh",
+   "ru": "подсолнух",
+   "cat": 46
+  },
+  {
+   "id": "rassada",
+   "ru": "рассада",
+   "cat": 46
+  },
+  {
+   "id": "roza",
+   "ru": "роза",
+   "cat": 46
+  },
+  {
+   "id": "romashka",
+   "ru": "ромашка",
+   "cat": 46
+  },
+  {
+   "id": "tyulpan",
+   "ru": "тюльпан",
+   "cat": 46
+  },
+  {
+   "id": "veter",
+   "ru": "ветер",
+   "cat": 47
+  },
+  {
+   "id": "grad",
+   "ru": "град",
+   "cat": 47
+  },
+  {
+   "id": "groza",
+   "ru": "гроза",
+   "cat": 47
+  },
+  {
+   "id": "dozhd",
+   "ru": "дождь",
+   "cat": 47
+  },
+  {
+   "id": "zharko",
+   "ru": "жарко",
+   "cat": 47
+  },
+  {
+   "id": "pogoda_zont",
+   "ru": "зонт",
+   "cat": 47
+  },
+  {
+   "id": "luzha",
+   "ru": "лужа",
+   "cat": 47
+  },
+  {
+   "id": "molniya",
+   "ru": "молния",
+   "cat": 47
+  },
+  {
+   "id": "prognoz_pogody",
+   "ru": "прогноз погоды",
+   "cat": 47
+  },
+  {
+   "id": "prokhladno",
+   "ru": "прохладно",
+   "cat": 47
+  },
+  {
+   "id": "rezinovye_sapogi",
+   "ru": "резиновые сапоги",
+   "cat": 47
+  },
+  {
+   "id": "sneg",
+   "ru": "снег",
+   "cat": 47
+  },
+  {
+   "id": "pogoda_solntse",
+   "ru": "солнце",
+   "cat": 47
+  },
+  {
+   "id": "teplo",
+   "ru": "тепло",
+   "cat": 47
+  },
+  {
+   "id": "tuman",
+   "ru": "туман",
+   "cat": 47
+  },
+  {
+   "id": "tucha",
+   "ru": "туча",
+   "cat": 47
+  },
+  {
+   "id": "kholodno",
+   "ru": "холодно",
+   "cat": 47
+  },
+  {
+   "id": "shapka_po_pogode",
+   "ru": "шапка по погоде",
+   "cat": 47
+  },
+  {
+   "id": "akvarel",
+   "ru": "акварель",
+   "cat": 54
+  },
+  {
+   "id": "albom",
+   "ru": "альбом",
+   "cat": 54
+  },
+  {
+   "id": "bumaga",
+   "ru": "бумага",
+   "cat": 54
+  },
+  {
+   "id": "guash",
+   "ru": "гуашь",
+   "cat": 54
+  },
+  {
+   "id": "dyrokol",
+   "ru": "дырокол",
+   "cat": 54
+  },
+  {
+   "id": "karandash",
+   "ru": "карандаш",
+   "cat": 54
+  },
+  {
+   "id": "karton",
+   "ru": "картон",
+   "cat": 54
+  },
+  {
+   "id": "kistochka",
+   "ru": "кисточка",
+   "cat": 54
+  },
+  {
+   "id": "kley",
+   "ru": "клей",
+   "cat": 54
+  },
+  {
+   "id": "kley_karandash",
+   "ru": "клей-карандаш",
+   "cat": 54
+  },
+  {
+   "id": "kniga",
+   "ru": "книга",
+   "cat": 54
+  },
+  {
+   "id": "korrektor",
+   "ru": "корректор",
+   "cat": 54
+  },
+  {
+   "id": "kraski",
+   "ru": "краски",
+   "cat": 54
+  },
+  {
+   "id": "lastik",
+   "ru": "ластик",
+   "cat": 54
+  },
+  {
+   "id": "lineyka",
+   "ru": "линейка",
+   "cat": 54
+  },
+  {
+   "id": "marker",
+   "ru": "маркер",
+   "cat": 54
+  },
+  {
+   "id": "kantselyariya_nozhnitsy",
+   "ru": "ножницы",
+   "cat": 54
+  },
+  {
+   "id": "papka",
+   "ru": "папка",
+   "cat": 54
+  },
+  {
+   "id": "plastilin",
+   "ru": "пластилин",
+   "cat": 54
+  },
+  {
+   "id": "prostoy_karandash",
+   "ru": "простой карандаш",
+   "cat": 54
+  },
+  {
+   "id": "ruchka",
+   "ru": "ручка",
+   "cat": 54
+  },
+  {
+   "id": "kantselyariya_skotch",
+   "ru": "скотч",
+   "cat": 54
+  },
+  {
+   "id": "skrepka",
+   "ru": "скрепка",
+   "cat": 54
+  },
+  {
+   "id": "stepler",
+   "ru": "степлер",
+   "cat": 54
+  },
+  {
+   "id": "stiker",
+   "ru": "стикер",
+   "cat": 54
+  },
+  {
+   "id": "tetrad",
+   "ru": "тетрадь",
+   "cat": 54
+  },
+  {
+   "id": "tochilka",
+   "ru": "точилка",
+   "cat": 54
+  },
+  {
+   "id": "fayl",
+   "ru": "файл",
+   "cat": 54
+  },
+  {
+   "id": "flomaster",
+   "ru": "фломастер",
+   "cat": 54
+  },
+  {
+   "id": "tsvetnaya_bumaga",
+   "ru": "цветная бумага",
+   "cat": 54
+  },
+  {
+   "id": "tsvetnoy_karandash",
+   "ru": "цветной карандаш",
+   "cat": 54
+  },
+  {
+   "id": "altybakan_kacheli",
+   "ru": "алтыбакан (качели)",
+   "cat": 72
+  },
+  {
+   "id": "asyk_igra",
+   "ru": "асык (игра)",
+   "cat": 72
+  },
+  {
+   "id": "kazakhskaya_kultura_baursak",
+   "ru": "баурсак",
+   "cat": 72
+  },
+  {
+   "id": "kazakhskaya_kultura_beshbarmak",
+   "ru": "бешбармак",
+   "cat": 72
+  },
+  {
+   "id": "dastarkhan",
+   "ru": "дастархан",
+   "cat": 72
+  },
+  {
+   "id": "dombra",
+   "ru": "домбра",
+   "cat": 72
+  },
+  {
+   "id": "zhent",
+   "ru": "жент",
+   "cat": 72
+  },
+  {
+   "id": "irimshik",
+   "ru": "иримшик",
+   "cat": 72
+  },
+  {
+   "id": "kazan",
+   "ru": "казан",
+   "cat": 72
+  },
+  {
+   "id": "kazy",
+   "ru": "казы",
+   "cat": 72
+  },
+  {
+   "id": "kamcha",
+   "ru": "камча",
+   "cat": 72
+  },
+  {
+   "id": "kobyz",
+   "ru": "кобыз",
+   "cat": 72
+  },
+  {
+   "id": "kokpar",
+   "ru": "кокпар",
+   "cat": 72
+  },
+  {
+   "id": "kumys",
+   "ru": "кумыс",
+   "cat": 72
+  },
+  {
+   "id": "kurt",
+   "ru": "курт",
+   "cat": 72
+  },
+  {
+   "id": "nauryz",
+   "ru": "Наурыз",
+   "cat": 72
+  },
+  {
+   "id": "nauryz_kozhe",
+   "ru": "наурыз-коже",
+   "cat": 72
+  },
+  {
+   "id": "piala",
+   "ru": "пиала",
+   "cat": 72
+  },
+  {
+   "id": "samovar",
+   "ru": "самовар",
+   "cat": 72
+  },
+  {
+   "id": "saukele",
+   "ru": "саукеле",
+   "cat": 72
+  },
+  {
+   "id": "talkan",
+   "ru": "талкан",
+   "cat": 72
+  },
+  {
+   "id": "tenge_kupyura",
+   "ru": "тенге (купюра)",
+   "cat": 72
+  },
+  {
+   "id": "tenge_moneta",
+   "ru": "тенге (монета)",
+   "cat": 72
+  },
+  {
+   "id": "tyubeteyka",
+   "ru": "тюбетейка",
+   "cat": 72
+  },
+  {
+   "id": "flag_kazakhstana",
+   "ru": "флаг Казахстана",
+   "cat": 72
+  },
+  {
+   "id": "chapan",
+   "ru": "чапан",
+   "cat": 72
+  },
+  {
+   "id": "shak_shak",
+   "ru": "шак-шак",
+   "cat": 72
+  },
+  {
+   "id": "shubat",
+   "ru": "шубат",
+   "cat": 72
+  },
+  {
+   "id": "yurta",
+   "ru": "юрта",
+   "cat": 72
+  },
+  {
+   "id": "mne_nravitsya",
+   "ru": "мне нравится",
+   "cat": 73
+  },
+  {
+   "id": "poloska_predlozhenie",
+   "ru": "полоска-предложение",
+   "cat": 73
+  },
+  {
+   "id": "smotri",
+   "ru": "смотри",
+   "cat": 73
+  },
+  {
+   "id": "u_menya_est",
+   "ru": "у меня есть",
+   "cat": 73
+  },
+  {
+   "id": "eto",
+   "ru": "это",
+   "cat": 73
+  },
+  {
+   "id": "ya_vizhu",
+   "ru": "я вижу",
+   "cat": 73
+  },
+  {
+   "id": "ya_slyshu",
+   "ru": "я слышу",
+   "cat": 73
+  },
+  {
+   "id": "ya_chuvstvuyu",
+   "ru": "я чувствую",
+   "cat": 73
+  },
+  {
+   "id": "bolshoy",
+   "ru": "большой",
+   "cat": 74
+  },
+  {
+   "id": "goryachiy",
+   "ru": "горячий",
+   "cat": 74
+  },
+  {
+   "id": "dlinnyy",
+   "ru": "длинный",
+   "cat": 74
+  },
+  {
+   "id": "drugoy",
+   "ru": "другой",
+   "cat": 74
+  },
+  {
+   "id": "zhyoltyy",
+   "ru": "жёлтый",
+   "cat": 74
+  },
+  {
+   "id": "zelyonyy",
+   "ru": "зелёный",
+   "cat": 74
+  },
+  {
+   "id": "korotkiy",
+   "ru": "короткий",
+   "cat": 74
+  },
+  {
+   "id": "krasnyy",
+   "ru": "красный",
+   "cat": 74
+  },
+  {
+   "id": "malenkiy",
+   "ru": "маленький",
+   "cat": 74
+  },
+  {
+   "id": "myagkiy",
+   "ru": "мягкий",
+   "cat": 74
+  },
+  {
+   "id": "siniy",
+   "ru": "синий",
+   "cat": 74
+  },
+  {
+   "id": "kholodnyy",
+   "ru": "холодный",
+   "cat": 74
+  },
+  {
+   "id": "v_vnutri",
+   "ru": "в (внутри)",
+   "cat": 75
+  },
+  {
+   "id": "za",
+   "ru": "за",
+   "cat": 75
+  },
+  {
+   "id": "mezhdu",
+   "ru": "между",
+   "cat": 75
+  },
+  {
+   "id": "na",
+   "ru": "на",
+   "cat": 75
+  },
+  {
+   "id": "nad",
+   "ru": "над",
+   "cat": 75
+  },
+  {
+   "id": "okolo",
+   "ru": "около",
+   "cat": 75
+  },
+  {
+   "id": "pered",
+   "ru": "перед",
+   "cat": 75
+  },
+  {
+   "id": "pod",
+   "ru": "под",
+   "cat": 75
+  },
+  {
+   "id": "ryadom",
+   "ru": "рядом",
+   "cat": 75
+  },
+  {
+   "id": "vetka",
+   "ru": "ветка",
+   "cat": 76
+  },
+  {
+   "id": "karman",
+   "ru": "карман",
+   "cat": 76
+  },
+  {
+   "id": "klyuv",
+   "ru": "клюв",
+   "cat": 76
+  },
+  {
+   "id": "knopka",
+   "ru": "кнопка",
+   "cat": 76
+  },
+  {
+   "id": "koleso",
+   "ru": "колесо",
+   "cat": 76
+  },
+  {
+   "id": "koren",
+   "ru": "корень",
+   "cat": 76
+  },
+  {
+   "id": "kran",
+   "ru": "кран",
+   "cat": 76
+  },
+  {
+   "id": "krylo",
+   "ru": "крыло",
+   "cat": 76
+  },
+  {
+   "id": "kryshka_banki",
+   "ru": "крышка банки",
+   "cat": 76
+  },
+  {
+   "id": "lapa",
+   "ru": "лапа",
+   "cat": 76
+  },
+  {
+   "id": "lepestok",
+   "ru": "лепесток",
+   "cat": 76
+  },
+  {
+   "id": "molniya_zastyozhka",
+   "ru": "молния (застёжка)",
+   "cat": 76
+  },
+  {
+   "id": "nozhka_stola",
+   "ru": "ножка стола",
+   "cat": 76
+  },
+  {
+   "id": "nozhka_stula",
+   "ru": "ножка стула",
+   "cat": 76
+  },
+  {
+   "id": "pero",
+   "ru": "перо",
+   "cat": 76
+  },
+  {
+   "id": "pugovitsa",
+   "ru": "пуговица",
+   "cat": 76
+  },
+  {
+   "id": "rukav",
+   "ru": "рукав",
+   "cat": 76
+  },
+  {
+   "id": "rul",
+   "ru": "руль",
+   "cat": 76
+  },
+  {
+   "id": "ruchka_dveri",
+   "ru": "ручка двери",
+   "cat": 76
+  },
+  {
+   "id": "ruchka_chashki",
+   "ru": "ручка чашки",
+   "cat": 76
+  },
+  {
+   "id": "spinka_stula",
+   "ru": "спинка стула",
+   "cat": 76
+  },
+  {
+   "id": "stvol_dereva",
+   "ru": "ствол дерева",
+   "cat": 76
+  },
+  {
+   "id": "stebel",
+   "ru": "стебель",
+   "cat": 76
+  },
+  {
+   "id": "fary",
+   "ru": "фары",
+   "cat": 76
+  },
+  {
+   "id": "khvost",
+   "ru": "хвост",
+   "cat": 76
+  },
+  {
+   "id": "ekran",
+   "ru": "экран",
+   "cat": 76
+  }
+ ]
+}

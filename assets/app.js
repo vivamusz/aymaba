@@ -30,6 +30,8 @@
       el.hidden = el.getAttribute("data-show-lang") !== lang;
     });
     try { localStorage.setItem(KEY, lang); } catch (e) {}
+    window.AYMABA_LANG = lang;
+    document.dispatchEvent(new CustomEvent("aymaba:lang", { detail: lang }));
   }
 
   // Ссылки из config.js: data-link="CONSTRUCTOR_URL" и т.п.
@@ -61,5 +63,6 @@
     });
   }
 
+  window.AYMABA_T = function (k) { return (T[window.AYMABA_LANG] || T.ru)[k] || T.ru[k] || k; };
   apply(getLang());
 })();

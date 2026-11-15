@@ -21,7 +21,7 @@
     <nav id="site-nav" class="nav" data-i18n-aria="menu" aria-label="Меню">
       <a data-link="CONSTRUCTOR_URL" href="https://2577ws-glitch.github.io/aba-constructor/" data-i18n="nav.constructor">Конструктор</a>
       <a data-link="COMMUNICATOR_URL" href="https://2577ws-glitch.github.io/pecs-aac/" data-i18n="nav.communicator">Коммуникатор</a>
-      <a href="./#library" data-i18n="nav.library">Библиотека карточек</a>
+      <a href="library.html" data-i18n="nav.library">Библиотека карточек</a>
       <a href="./#sets" data-i18n="nav.sets.short">Наборы для печати</a>
       <a href="./#pricing" data-i18n="nav.pricing">Тарифы</a>
     </nav>
@@ -81,12 +81,11 @@
           <p data-i18n="tile.communicator.d">Коммуникатор на пиктограммах для телефона и планшета. Ставится как приложение.</p>
           <span class="go"><span data-i18n="open">Открыть</span> →</span>
         </a>
-        <a class="tile t-library" href="#library">
-          <span class="badge" data-i18n="soon">Скоро</span>
+        <a class="tile t-library" href="library.html">
           <span class="icon" aria-hidden="true"><svg viewBox="0 0 48 48"><rect x="6" y="8" width="10" height="32" rx="2"/><rect x="19" y="8" width="10" height="32" rx="2"/><path d="M32 10l8-2 6 30-8 2z"/></svg></span>
           <h3 data-i18n="nav.library">Библиотека карточек</h3>
-          <p data-i18n="tile.library.d">Поиск карточек и печать нужного размера. Подписи на казахском и русском.</p>
-          <span class="go"><span data-i18n="more">Подробнее</span> →</span>
+          <p data-i18n="tile.library.d">Карточки по темам: глаголы, еда, животные, предметы. Поиск по слову.</p>
+          <span class="go"><span data-i18n="open">Открыть</span> →</span>
         </a>
         <a class="tile t-sets" href="#sets">
           <span class="icon" aria-hidden="true"><svg viewBox="0 0 48 48"><path d="M14 6h20v10H14z"/><rect x="6" y="16" width="36" height="18" rx="4"/><path d="M14 28h20v14H14z" class="w"/></svg></span>
@@ -101,9 +100,10 @@
   <section id="library" class="panel-sec" aria-labelledby="lib-h">
     <div class="wrap"><div class="panel">
       <div>
-        <h2 id="lib-h"><span data-i18n="library.title">Библиотека карточек</span> <span class="badge inline" data-i18n="soon">Скоро</span></h2>
-        <p data-i18n="library.text">Мы собираем все карточки в одну библиотеку: глаголы, еда, напитки, предметы. Подписи на русском и казахском, поиск и печать сеткой нужного размера.</p>
-        <p class="muted" data-i18n="library.note">Раздел откроется скоро. Пока карточки доступны в коммуникаторе и в наборах для печати.</p>
+        <h2 id="lib-h" data-i18n="library.title">Библиотека карточек</h2>
+        <p data-i18n="library.text">Все карточки в одной библиотеке: глаголы, еда, напитки, предметы и другие темы. Есть поиск по слову и фильтр по темам.</p>
+        <p class="muted" data-i18n="library.note">Карточки можно смотреть и искать уже сейчас. Печать в полном размере появится в подписке.</p>
+        <a class="btn btn-primary" href="library.html" data-i18n="lib.open">Открыть библиотеку</a>
       </div>
     </div></div>
   </section>

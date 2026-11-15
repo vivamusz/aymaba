@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Библиотека карточек — AYMABA</title>
+<meta name="description" content="Библиотека карточек AYMABA для занятий: глаголы, еда, животные, предметы. Поиск по слову и фильтр по темам.">
+<meta name="theme-color" content="#1f7a6d">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<!-- Шапка и подвал синхронизируются из index.html скриптом tools/build_legal.py -->
+<!--HEADER-->
+<a class="skip" href="#main" data-i18n="skip">Перейти к содержанию</a>
+<header class="site-header">
+  <div class="wrap bar">
+    <a class="brand" href="./" aria-label="AYMABA">
+      <img src="assets/favicon.svg" alt="" width="36" height="36"><span>AYMABA</span>
+    </a>
+    <button class="menu-toggle" data-i18n-aria="menu" aria-label="Меню" aria-expanded="false" aria-controls="site-nav"><span aria-hidden="true">☰</span> <span class="menu-label" data-i18n="menu" aria-hidden="true">Меню</span></button>
+    <nav id="site-nav" class="nav" data-i18n-aria="menu" aria-label="Меню">
+      <a data-link="CONSTRUCTOR_URL" href="https://2577ws-glitch.github.io/aba-constructor/" data-i18n="nav.constructor">Конструктор</a>
+      <a data-link="COMMUNICATOR_URL" href="https://2577ws-glitch.github.io/pecs-aac/" data-i18n="nav.communicator">Коммуникатор</a>
+      <a href="library.html" data-i18n="nav.library">Библиотека карточек</a>
+      <a href="./#sets" data-i18n="nav.sets.short">Наборы для печати</a>
+      <a href="./#pricing" data-i18n="nav.pricing">Тарифы</a>
+    </nav>
+    <div class="lang-switch" role="group" aria-label="Язык / Тіл">
+      <button type="button" data-lang="kk" aria-pressed="false">KZ</button>
+      <button type="button" data-lang="ru" aria-pressed="true">RU</button>
+    </div>
+  </div>
+</header>
+<!--/HEADER-->
+<main id="main" class="library">
+  <div class="wrap">
+    <h1 data-i18n="lib.title">Библиотека карточек</h1>
+    <p class="lead" data-i18n="lib.intro">Карточки для занятий: глаголы, еда, животные, предметы и другие темы. Нажмите на карточку, чтобы увидеть её крупнее.</p>
+    <p class="note"><span data-i18n="lib.print">Печать в полном размере — по подписке (скоро).</span></p>
+    <p class="note" data-show-lang="kk" hidden data-i18n="lib.runote"></p>
+
+    <div class="lib-tools">
+      <label class="search">
+        <span data-i18n="lib.search">Поиск по слову</span>
+        <input id="q" type="search" autocomplete="off" placeholder="Например: яблоко">
+      </label>
+      <div class="chips" id="chips" role="group" aria-label="Категории" data-i18n-aria="lib.cats"></div>
+      <p class="count" id="count" aria-live="polite"></p>
+    </div>
+
+    <ul class="grid" id="grid"></ul>
+    <p class="empty" id="empty" hidden data-i18n="lib.empty">Ничего не найдено. Попробуйте другое слово или категорию.</p>
+  </div>
+
+  <dialog id="viewer" aria-labelledby="v-name">
+    <button class="v-close" id="v-close" type="button" data-i18n-aria="lib.close" aria-label="Закрыть">✕</button>
+    <img id="v-img" alt="" width="512" height="512">
+    <p class="v-name" id="v-name"></p>
+    <p class="v-cat" id="v-cat"></p>
+    <p class="v-note" data-i18n="lib.print">Печать в полном размере — по подписке (скоро).</p>
+  </dialog>
+</main>
+<!--FOOTER-->
+<footer class="site-footer">
+  <div class="wrap">
+    <nav class="footer-links" aria-label="Документы">
+      <a href="oferta.html" data-i18n="footer.oferta">Публичная оферта</a>
+      <a href="terms.html" data-i18n="footer.terms">Условия использования</a>
+      <a href="faq.html" data-i18n="footer.faq">Частые вопросы</a>
+    </nav>
+    <p class="disclaimer" data-i18n="disclaimer">Материалы AYMABA — вспомогательные образовательные материалы, а не медицинская услуга. Методику и цели занятий выбирает специалист.</p>
+    <p class="copy" data-i18n="footer.copy">© 2026 AYMABA, г. Семей, Казахстан</p>
+  </div>
+</footer>
+<script src="assets/config.js"></script>
+<script src="assets/i18n.js"></script>
+<script src="assets/app.js"></script>
+<!--/FOOTER-->
+<script src="assets/library.js"></script>
+</body>
+</html>
