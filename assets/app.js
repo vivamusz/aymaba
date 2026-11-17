@@ -21,6 +21,10 @@
       var k = el.getAttribute("data-i18n-aria");
       if (dict[k] !== undefined) el.setAttribute("aria-label", dict[k]);
     });
+    document.querySelectorAll("[data-i18n-ph]").forEach(function (el) {
+      var k = el.getAttribute("data-i18n-ph");
+      if (dict[k] !== undefined) el.setAttribute("placeholder", dict[k]);
+    });
     var t = document.querySelector("title[data-i18n-title]");
     if (t) document.title = dict[t.getAttribute("data-i18n-title")] || document.title;
     document.querySelectorAll(".lang-switch button").forEach(function (b) {

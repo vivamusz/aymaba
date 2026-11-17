@@ -107,13 +107,13 @@ def main():
 """
         (ROOT / dst).write_text(page, encoding="utf-8")
         print("OK", dst, len(page))
-    # Обновляем шапку и подвал в library.html (страница пишется вручную).
-    lib = ROOT / "library.html"
-    if lib.exists():
+    # Обновляем шапку и подвал в library.html и cards.html (пишутся вручную).
+    for lib in (ROOT / "library.html", ROOT / "cards.html"):
+      if lib.exists():
         t = lib.read_text(encoding="utf-8")
         t = re.sub(r"<!--HEADER-->.*?<!--/HEADER-->", lambda m: header, t, flags=re.S)
         t = re.sub(r"<!--FOOTER-->.*?<!--/FOOTER-->", lambda m: footer, t, flags=re.S)
-        lib.write_text(t, encoding="utf-8"); print("OK library.html (шапка/подвал)")
+        lib.write_text(t, encoding="utf-8"); print("OK", lib.name, "(шапка/подвал)")
 
 if __name__ == "__main__":
     main()

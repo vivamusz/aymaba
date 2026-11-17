@@ -25,8 +25,12 @@ with sync_playwright() as p:
         pg.screenshot(path=str(out / f"library_search_{name}.png"))
         pg.fill("#q", ""); pg.click(".chip[data-cat='1']"); pg.wait_for_timeout(500)
         pg.screenshot(path=str(out / f"library_verbs_{name}.png"))
-        pg.click("#grid li:not([hidden]) .cardbtn"); pg.wait_for_timeout(500)
-        pg.screenshot(path=str(out / f"library_viewer_{name}.png"))
+        for i in range(5): pg.locator("#grid li:not([hidden]) .cardbtn").nth(i).click()
+        pg.wait_for_timeout(300); pg.screenshot(path=str(out / f"library_selected_{name}.png"))
+        for v in ["set", "settings", "help"]:
+            pg.evaluate(f"location.hash='{v}'"); pg.wait_for_timeout(900)
+            pg.screenshot(path=str(out / f"library_{v}_{name}.png"))
+        pg.evaluate("localStorage.clear()")
         print(name, pg.inner_text("#count"))
         for doc in ["oferta", "terms", "faq"]:
             pg.goto(base + doc + ".html"); pg.wait_for_load_state("networkidle")
