@@ -5,7 +5,7 @@
 и юридические документы. Обычный статический сайт: HTML + CSS + JS, **без сборки**.
 Работает на GitHub Pages (ветка `main`, корень).
 
-Сайт: https://2577ws-glitch.github.io/aymaba/
+Сайт: https://vivamusz.github.io/aymaba/
 
 ## Структура
 
