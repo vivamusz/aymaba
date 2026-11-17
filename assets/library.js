@@ -213,28 +213,65 @@
     var ms = $("mobSum"); if (ms) { ms.hidden = !n || view() === "set"; var nav = document.querySelector(".mob-nav"); if (nav) ms.style.bottom = nav.offsetHeight + "px"; }
     document.querySelectorAll("[data-sheet]").forEach(function (b) { b.setAttribute("aria-checked", b.dataset.sheet === st.sheet ? "true" : "false"); });
   }
-  function renderMini() {   // «живой» лист: по листам, столько столбцов, сколько на бумаге
+  var miniPage = 0;
+  function renderMini() {   // «живой» лист: целый A4 в уменьшенном виде, по одному листу, стрелки ◀ ▶
     var box = $("mini"), sh = sheet(), per = sh.slots.length; box.innerHTML = "";
     if (!filled()) return;
-    var pages = Math.ceil(st.items.length / per);
-    for (var p = 0; p < pages; p++) {
-      var h = document.createElement("p"); h.className = "mini-h"; h.textContent = fmt("cp.sheet", { n: p + 1 }); box.appendChild(h);
-      var ul = document.createElement("ul"); ul.className = "mini"; ul.style.gridTemplateColumns = "repeat(" + sh.cols + ",1fr)";
-      if (sh.story) ul.classList.add("mini-story");
-      for (var k = 0; k < per; k++) {
-        var i = p * per + k, it = st.items[i], li = document.createElement("li");
-        li.style.aspectRatio = sh.slots[k].w + " / " + sh.slots[k].h;
-        if (!it) { li.className = "mini-empty"; ul.appendChild(li); continue; }
-        var im = document.createElement("img"); im.src = it.thumb; im.alt = it.ru || ""; im.draggable = false; li.appendChild(im);
-        var acts = document.createElement("span"); acts.className = "mini-acts";
-        [["+1", "cp.copy", function (j) { addCopy(j); }], ["×", "cp.remove", function (j) { st.items[j] = null; compact(); changed(); }]].forEach(function (a) {
-          var b = document.createElement("button"); b.type = "button"; b.textContent = a[0]; b.title = t(a[1]) + (it.ru ? " — " + it.ru : ""); b.setAttribute("aria-label", b.title);
-          b.addEventListener("click", (function (j) { return function () { a[2](j); }; })(i)); acts.appendChild(b);
-        });
-        li.appendChild(acts); ul.appendChild(li);
-      }
-      box.appendChild(ul);
+    var pages = Math.max(1, Math.ceil(st.items.length / per));
+    if (miniPage > pages - 1) miniPage = pages - 1; if (miniPage < 0) miniPage = 0;
+    var p = miniPage, A4W = 2480, A4H = 3508, ox = Math.max(0, (A4W - sh.px.w) / 2), oy = Math.max(0, (A4H - sh.px.h) / 2);
+    var nav = document.createElement("div"); nav.className = "mini-nav";
+    function navBtn(txt, lab, d) { var b = document.createElement("button"); b.type = "button"; b.className = "mini-arrow"; b.textContent = txt; b.title = lab; b.setAttribute("aria-label", lab);
+      b.disabled = p + d < 0 || p + d > pages - 1; b.addEventListener("click", function () { miniPage = p + d; renderMini(); }); return b; }
+    var lab = document.createElement("span"); lab.className = "mini-h"; lab.textContent = fmt("cp.sheetOf", { n: p + 1, m: pages });
+    nav.appendChild(navBtn("◀", t("pv.prev"), -1)); nav.appendChild(lab); nav.appendChild(navBtn("▶", t("pv.next"), 1));
+    box.appendChild(nav);
+    var pg = document.createElement("div"); pg.className = "mini-a4";
+    var ul = document.createElement("ul"); ul.className = "mini"; if (sh.story) ul.classList.add("mini-story");
+    for (var k = 0; k < per; k++) {
+      var i = p * per + k, it = st.items[i], s = sh.slots[k], li = document.createElement("li");
+      li.style.left = ((ox + s.x) / A4W * 100) + "%"; li.style.top = ((oy + s.y) / A4H * 100) + "%";
+      li.style.width = (s.w / A4W * 100) + "%"; li.style.height = (s.h / A4H * 100) + "%";
+      if (!it) { li.className = "mini-empty"; ul.appendChild(li); continue; }
+      var im = document.createElement("img"); im.src = it.thumb; im.alt = it.ru || ""; im.draggable = false; li.appendChild(im);
+      var acts = document.createElement("span"); acts.className = "mini-acts";
+      [["+1", "cp.copy", function (j) { addCopy(j); }], ["×", "cp.remove", function (j) { st.items[j] = null; compact(); changed(); }]].forEach(function (a) {
+        var b = document.createElement("button"); b.type = "button"; b.textContent = a[0]; b.title = t(a[1]) + (it.ru ? " — " + it.ru : ""); b.setAttribute("aria-label", b.title);
+        b.addEventListener("click", (function (j) { return function () { a[2](j); }; })(i)); acts.appendChild(b);
+      });
+      li.appendChild(acts); ul.appendChild(li);
     }
+    pg.appendChild(ul);
+    var tpl = document.createElement("img"); tpl.className = "mini-tpl"; tpl.src = sh.template; tpl.alt = ""; tpl.draggable = false;
+    tpl.style.left = (ox / A4W * 100) + "%"; tpl.style.top = (oy / A4H * 100) + "%"; tpl.style.width = (sh.px.w / A4W * 100) + "%"; tpl.style.height = (sh.px.h / A4H * 100) + "%";
+    pg.appendChild(tpl); box.appendChild(pg);
+  }
+
+  /* ---------- просмотр листов на весь экран, стрелки ◀ ▶, Esc — закрыть ---------- */
+  function openViewer() {
+    var sh = sheet(), pages = S.sheetsOf(st.items, sh), cur = 0, o = { cut: !!st.cut }, cache = {};
+    if (!pages.length) return;
+    var v = document.createElement("div"); v.className = "pv"; v.setAttribute("role", "dialog"); v.setAttribute("aria-modal", "true");
+    v.innerHTML = '<div class="pv-top"><span class="pv-lab"></span><button type="button" class="pv-x"></button></div>' +
+      '<button type="button" class="pv-arrow pv-prev">◀</button><div class="pv-stage"><p class="pv-wait"></p></div><button type="button" class="pv-arrow pv-next">▶</button>';
+    document.body.appendChild(v); document.body.style.overflow = "hidden";
+    var stage = v.querySelector(".pv-stage"), lab = v.querySelector(".pv-lab"), prev = v.querySelector(".pv-prev"), next = v.querySelector(".pv-next"), x = v.querySelector(".pv-x");
+    x.textContent = "✕ " + t("pv.close"); prev.setAttribute("aria-label", t("pv.prev")); next.setAttribute("aria-label", t("pv.next"));
+    function close() { document.removeEventListener("keydown", key); v.remove(); document.body.style.overflow = ""; }
+    function key(e) { if (e.key === "Escape") close(); else if (e.key === "ArrowLeft") go(cur - 1); else if (e.key === "ArrowRight") go(cur + 1); }
+    function go(n) {
+      if (n < 0 || n > pages.length - 1) return; cur = n;
+      lab.textContent = fmt("cp.sheetOf", { n: cur + 1, m: pages.length }); prev.disabled = cur === 0; next.disabled = cur === pages.length - 1;
+      stage.innerHTML = '<p class="pv-wait">' + t("cp.building") + '</p>';
+      var want = cur, pr = cache[cur] || (cache[cur] = S.renderSheetCanvas(sh, pages[cur], st.cap, o).then(function (c) { var w = document.createElement("canvas"); w.width = 1240; w.height = 1754; w.getContext("2d").drawImage(c, 0, 0, 1240, 1754); return w; }));
+      pr.then(function (c) { if (want !== cur || !v.isConnected) return; stage.innerHTML = ""; var im = document.createElement("img"); im.src = c.toDataURL("image/jpeg", 0.9); im.alt = lab.textContent; im.draggable = false; stage.appendChild(im); })
+        .catch(function (e) { console.error(e); stage.innerHTML = '<p class="pv-wait">' + t("cp.err") + '</p>'; });
+    }
+    x.addEventListener("click", close); prev.addEventListener("click", function () { go(cur - 1); }); next.addEventListener("click", function () { go(cur + 1); });
+    v.addEventListener("click", function (e) { if (e.target === v) close(); });
+    var sx = null; stage.addEventListener("touchstart", function (e) { sx = e.touches[0].clientX; }, { passive: true });
+    stage.addEventListener("touchend", function (e) { if (sx === null) return; var dx = e.changedTouches[0].clientX - sx; sx = null; if (Math.abs(dx) > 40) go(cur + (dx < 0 ? 1 : -1)); });
+    document.addEventListener("keydown", key); go(0); x.focus();
   }
 
   /* ---------- листы (Мой набор) ---------- */
@@ -433,7 +470,7 @@
     $("nameHint").textContent = fmt("cp.namehint", { prefix: sheet().prefix });
     $("fname").value = st.fname || "";
   }
-  document.querySelectorAll("[data-sheet]").forEach(function (b) { b.addEventListener("click", function () { st.sheet = b.dataset.sheet; renderSettings(); changed(); renderMini(); }); });
+  document.querySelectorAll("[data-sheet]").forEach(function (b) { b.addEventListener("click", function () { st.sheet = b.dataset.sheet; miniPage = 0; renderSettings(); changed(); renderMini(); }); });
   document.querySelectorAll("[data-cap]").forEach(function (b) { b.addEventListener("click", function () { st.cap = b.dataset.cap; renderSettings(); changed(); }); });
   document.querySelectorAll("[data-cut]").forEach(function (b) { b.addEventListener("click", function () { st.cut = b.dataset.cut === "1"; renderSettings(); changed(); }); });
   $("fname").addEventListener("input", function () { st.fname = this.value; save(); });
@@ -443,7 +480,7 @@
   document.querySelectorAll("[data-out]").forEach(function (b) {
     b.addEventListener("click", function () {
       var kind = b.dataset.out, o = { cut: !!st.cut }, win = null;
-      if (kind === "preview") { try { win = window.open("", "_blank"); if (win) win.document.write("<p style='font:16px sans-serif;padding:20px'>" + t("cp.building") + "</p>"); } catch (e) { win = null; } }
+      if (kind === "preview") { openViewer(); return; }
       busy(true); msg(kind === "print" ? t("out.preparing") : t("cp.building"));
       var p = kind === "pdf" ? S.exportPdf(sheet(), st.items, st.cap, st.fname, o)
             : kind === "docx" ? S.exportDocx(sheet(), st.items, st.cap, st.fname, o)
