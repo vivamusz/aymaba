@@ -221,7 +221,7 @@
     var pages = Math.ceil(st.items.length / per);
     for (var p = 0; p < pages; p++) {
       var h = document.createElement("p"); h.className = "mini-h"; h.textContent = fmt("cp.sheet", { n: p + 1 }); box.appendChild(h);
-      var ul = document.createElement("ul"); ul.className = "mini"; ul.style.gridTemplateColumns = "repeat(" + sh.cols + ",1fr)";
+      var ul = document.createElement("ul"); ul.className = "mini"; ul.style.gridTemplateColumns = "repeat(" + sh.cols + ",1fr)"; ul.style.maxWidth = "calc((100vh - 400px) * " + (sh.cols / Math.ceil(per / sh.cols)).toFixed(3) + ")";
       if (sh.story) ul.classList.add("mini-story");
       for (var k = 0; k < per; k++) {
         var i = p * per + k, it = st.items[i], li = document.createElement("li");
