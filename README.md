@@ -22,7 +22,7 @@ assets/style.css      оформление всех страниц (цвета �
 assets/library.js     интерфейс страницы library.html: разделы, выбор карточек, «Мой набор», рамки
 assets/library.css    оформление library.html (меню слева, панель «Мой набор» справа, @media print)
 assets/sheets.js      геометрия листов 9/7/5, отрисовка, PDF (pdf-lib), печать, Word (.docx)
-assets/pecs/          template.png (9 см), template-5.png (5 см), template-7.png (7 см, ВРЕМЕННЫЙ),
+assets/pecs/          template.png (9 см), template-5.png (5 см), template-7.png (7 см),
                       template-a5/-a6/-a4.png (сюжетные, tools/make_story_templates.py)
 assets/fonts/DejaVuSans-Bold.ttf  шрифт подписей (не заменять)
 assets/vendor/        pdf-lib 1.17.1, @pdf-lib/fontkit 1.1.1, fflate 0.8.2 (локальные копии, без CDN)
@@ -34,7 +34,7 @@ tools/legal_src/*.docx исходники документов (оферта, у
 tools/build_legal.py  docx → html (+ обновляет шапку/подвал в library.html)
 tools/build_cards.py  собирает cards/ и data/cards.json из пакетов /workspace/aymaba_web и /workspace/aymaba_verbs68
 tools/make_story_templates.py  рисует шаблоны сюжетных A5/A6/A4
-tools/make_template7.py  рисует временный template-7.png в стиле template.png
+tools/make_template7.py  рисовал старый template-7.png в стиле template.png
 tools/shots.py        скриншоты для проверки (playwright + chrome)
 .nojekyll             чтобы GitHub Pages отдавал файлы как есть
 ```
@@ -130,7 +130,7 @@ python tools/build_legal.py
 
 ## Что пока заглушка
 
-- template-7.png — временный (см. «Печать»).
+- (template-7.png постоянный, решение пользователя 18.11.2026)
 - Печать пока открыта всем, без подписки.
 - «Другие наборы» — «Скоро».
 - Тарифы — предварительные, без оплаты и входа (GitHub Pages не умеет закрывать платные разделы).
