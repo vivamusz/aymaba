@@ -2,7 +2,7 @@
    Порядок работы: 1) размер листа  2) отметить карточки в любых темах (поиск — сразу по всем)  3) печать / PDF / Word.
    Разделы (#...): library, set, sets, settings, help.
    Данные: data/cards.json; превью cards/<id>.webp (только для выбора), печать — print/<id>.webp (1063 px).
-   Подписи: русская берётся из карточки; казахская по умолчанию ПУСТАЯ (черновики kk не проверены — не подставляем).
+   Подписи: русская и казахская берутся из карточки (kk — проверенный перевод пользователя); в режиме KZ темы и подписи в сетке показываются по-казахски.
    Наборы хранятся в браузере (localStorage). Свои фото не сохраняются (только до закрытия страницы). */
 (function () {
   var S = window.AYMABA_SHEETS, t = window.AYMABA_T;
@@ -15,6 +15,8 @@
   var st = null;   // текущий набор: { id, name, sheet, cap, cut, fname, items: [null | item] }
 
   function fmt(k, o) { var s = t(k); Object.keys(o || {}).forEach(function (x) { s = s.split("{" + x + "}").join(o[x]); }); return s; }
+  function isKk() { return window.AYMABA_LANG === "kk"; }
+  function nm(c) { return (isKk() && c.kk) || c.ru; }   // название карточки/темы на языке сайта
   function norm(s) { return (s || "").toLowerCase().replace(/ё/g, "е").trim(); }
   function sheet() { return S.SHEETS[st.sheet] || S.SHEETS["9"]; }
   function filled(items) { return (items || st.items).filter(Boolean).length; }
@@ -33,7 +35,7 @@
   }
 
   /* ---------- карточки набора ---------- */
-  function libItem(c) { return { key: ++uid, kind: "lib", id: c.id, ru: c.ru, kk: "", thumb: "cards/" + c.id + ".webp", hi: "print/" + c.id + ".webp", iw: 1, ih: 1, ox: 0, oy: 0, scale: 1, rot: 0 }; }
+  function libItem(c) { return { key: ++uid, kind: "lib", id: c.id, ru: c.ru, kk: c.kk || "", thumb: "cards/" + c.id + ".webp", hi: "print/" + c.id + ".webp", iw: 1, ih: 1, ox: 0, oy: 0, scale: 1, rot: 0 }; }
   function cloneItem(it) { var o = {}; Object.keys(it).forEach(function (k) { o[k] = it[k]; }); o.key = ++uid; return o; }
   function fileItem(f) {
     return new Promise(function (res) {
@@ -55,14 +57,14 @@
   function ser(it) {
     if (!it || it.kind !== "lib") return null;
     var o = { id: it.id }, c = byId[it.id];
-    if (it.kk) o.kk = it.kk; if (c && it.ru !== c.ru) o.ru = it.ru;
+    if (c ? it.kk !== (c.kk || "") : it.kk) o.kk = it.kk; if (c && it.ru !== c.ru) o.ru = it.ru;
     if (it.ox) o.ox = +it.ox.toFixed(3); if (it.oy) o.oy = +it.oy.toFixed(3);
     if (it.scale && it.scale !== 1) o.sc = it.scale; if (it.rot) o.r = it.rot;
     return o;
   }
   function deser(o) {
     var c = o && byId[o.id]; if (!c) return null;
-    var it = libItem(c); if (o.kk) it.kk = o.kk; if (o.ru != null) it.ru = o.ru;
+    var it = libItem(c); if (o.kk != null) it.kk = o.kk; if (o.ru != null) it.ru = o.ru;
     it.ox = o.ox || 0; it.oy = o.oy || 0; it.scale = o.sc || 1; it.rot = o.r || 0; return it;
   }
   function packSet(x) { return { id: x.id, name: x.name, sheet: x.sheet, cap: x.cap, cut: !!x.cut, fname: x.fname || "", items: x.items.map(ser).filter(Boolean) }; }
@@ -142,7 +144,7 @@
     var box = $("chips"); box.innerHTML = "";
     [{ num: "all", ru: t("lib.all") }].concat(DATA.categories).forEach(function (c) {
       var b = document.createElement("button"); b.type = "button"; b.className = "chip"; b.dataset.cat = c.num;
-      b.textContent = c.ru + " · " + (c.num === "all" ? DATA.cards.length : catCount(c.num)); b.setAttribute("aria-pressed", String(c.num) === String(cat));
+      b.textContent = nm(c) + " · " + (c.num === "all" ? DATA.cards.length : catCount(c.num)); b.setAttribute("aria-pressed", String(c.num) === String(cat));
       b.addEventListener("click", function () { cat = c.num; $("q").value = ""; renderChips(); filter(); });
       box.appendChild(b);
     });
@@ -150,7 +152,7 @@
     READY.forEach(function (name) {
       var c = DATA.categories.find(function (x) { return norm(x.ru) === name; }); if (!c) return;
       var b = document.createElement("button"); b.type = "button"; b.className = "chip chip-ready";
-      b.textContent = "＋ " + c.ru + " (" + catCount(c.num) + ")";
+      b.textContent = "＋ " + nm(c) + " (" + catCount(c.num) + ")";
       b.addEventListener("click", function () { addCards(DATA.cards.filter(function (x) { return x.cat === c.num; })); });
       r.appendChild(b);
     });
@@ -164,11 +166,11 @@
   function renderGrid() {
     var frag = document.createDocumentFragment();
     DATA.cards.forEach(function (c) {
-      var li = document.createElement("li"); li.dataset.cat = c.cat; li.dataset.q = norm(c.ru); li.dataset.id = c.id;
+      var li = document.createElement("li"); li.dataset.cat = c.cat; li.dataset.q = norm(c.ru) + "|" + norm(c.kk); li.dataset.id = c.id;
       var b = document.createElement("button"); b.type = "button"; b.className = "cardbtn"; b.setAttribute("aria-pressed", "false");
       b.draggable = true;   // перетаскивание в «Мой набор» (передаётся только id, не картинка)
       var im = document.createElement("img"); im.src = "cards/" + c.id + ".webp"; im.alt = ""; im.loading = "lazy"; im.decoding = "async"; im.width = 256; im.height = 256; im.draggable = false;
-      var cap = document.createElement("span"); cap.className = "cap"; cap.textContent = c.ru;
+      var cap = document.createElement("span"); cap.className = "cap"; cap.textContent = nm(c);
       var ok = document.createElement("span"); ok.className = "ok"; ok.setAttribute("aria-hidden", "true"); ok.textContent = "✓";
       b.appendChild(im); b.appendChild(cap); b.appendChild(ok);
       b.addEventListener("click", function () {
@@ -190,7 +192,7 @@
     $("empty").hidden = n !== 0;
     $("count").textContent = fmt("lib.count", { n: n, total: DATA.cards.length }) + (s ? " · " + t("lib.allcats") : "");
     var c = DATA.categories.find(function (x) { return String(x.num) === String(cat); });
-    $("addAll").textContent = !s && c ? fmt("cp.addwhole", { cat: c.ru, n: n }) : t("cp.addcat");
+    $("addAll").textContent = !s && c ? fmt("cp.addwhole", { cat: nm(c), n: n }) : t("cp.addcat");
   }
   function markGrid() {
     var cnt = {}; st.items.forEach(function (x) { if (x && x.kind === "lib") cnt[x.id] = (cnt[x.id] || 0) + 1; });
@@ -428,7 +430,7 @@
   function renderSettings() {
     document.querySelectorAll("[data-cap]").forEach(function (b) { b.setAttribute("aria-checked", b.dataset.cap === st.cap ? "true" : "false"); });
     document.querySelectorAll("[data-cut]").forEach(function (b) { b.setAttribute("aria-checked", (b.dataset.cut === "1") === !!st.cut ? "true" : "false"); });
-    $("sheetInfo").textContent = t("cp.info" + st.sheet) + (sheet().temporary ? " · " + t("cp.t7note") : "");
+    $("sheetInfo").textContent = t("cp.info" + st.sheet);
     $("capHint").textContent = t("cp.caphint." + st.cap);
     $("nameHint").textContent = fmt("cp.namehint", { prefix: sheet().prefix });
     $("fname").value = st.fname || "";
@@ -461,12 +463,13 @@
   });
 
   /* ---------- запуск ---------- */
-  function renderAll() { renderChips(); filter(); renderSettings(); renderCounts(); renderMini(); markGrid(); if (view() === "set") renderSheets(); if (view() === "sets") renderSets(); }
+  function renderGridNames() { $("grid").querySelectorAll("li").forEach(function (li) { var c = byId[li.dataset.id]; if (c) li.querySelector(".cap").textContent = nm(c); }); }
+  function renderAll() { renderGridNames(); renderChips(); filter(); renderSettings(); renderCounts(); renderMini(); markGrid(); if (view() === "set") renderSheets(); if (view() === "sets") renderSets(); }
   $("q").addEventListener("input", filter);
   window.addEventListener("hashchange", showView);
   window.addEventListener("resize", function () { if (st) renderCounts(); });
   document.addEventListener("aymaba:lang", function () { if (DATA) renderAll(); });
-  fetch("data/cards.json").then(function (r) { return r.json(); }).then(function (d) {
+  fetch("data/cards.json?v=kk1").then(function (r) { return r.json(); }).then(function (d) {
     DATA = d; d.cards.forEach(function (c) { byId[c.id] = c; });
     load(); fromShare(); renderGrid(); renderAll(); showView();
     window.AYMABA_LIB = { get st() { return st; }, store: function () { return store; }, changed: changed, addFiles: addFiles, libItem: libItem, cards: d.cards, switchTo: switchTo, shareUrl: shareUrl, packSet: packSet };   // для проверки

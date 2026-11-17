@@ -5,7 +5,8 @@
 cards/<id>.webp — веб-версии web/<id>.webp (512×512) для сетки и просмотра.
 print/<id>.webp — версии для печати: из full/<id>.png, 1063×1063 px (9 см при 300 dpi),
 WebP качество 85. Пересоздаются только если исходник новее. Нужен Pillow.
-Казахские поля (kk, category_kk) не переносятся: это непроверенные черновики.
+Казахские поля: kk карточки и category_kk переносятся, только если перевод проверен (kk_draft не True).
+Источник проверенного перевода — таблица пользователя (/workspace/aymaba_kk/words_kk.*, categories_kk.*).
 """
 import json, shutil, sys, pathlib
 from concurrent.futures import ProcessPoolExecutor
@@ -15,7 +16,7 @@ web = pathlib.Path(sys.argv[1] if len(sys.argv) > 1 else "/workspace/aymaba_web"
 verb_packs = [pathlib.Path(a) for a in sys.argv[2:]] or [pathlib.Path("/workspace/aymaba_verbs68"), pathlib.Path("/workspace/aymaba_verbs24")]
 out_img = ROOT / "cards"; out_img.mkdir(exist_ok=True)
 out_print = ROOT / "print"; out_print.mkdir(exist_ok=True)
-items, cats, jobs = [], {}, []
+items, cats, cats_kk, jobs = [], {}, {}, []
 PRINT_PX, PRINT_Q = 1063, 85
 
 def make_print(job):
@@ -40,8 +41,12 @@ def add(src_dir, rec, num):
     dst = out_print / f"{rec['id']}.webp"
     if not dst.exists() or dst.stat().st_mtime < full.stat().st_mtime:
         jobs.append((str(full), str(dst)))
-    items.append({"id": rec["id"], "ru": rec["ru"].strip(), "cat": num})
+    ok = not rec.get("kk_draft")
+    item = {"id": rec["id"], "ru": rec["ru"].strip(), "cat": num}
+    if ok and (rec.get("kk") or "").strip(): item["kk"] = rec["kk"].strip()
+    items.append(item)
     cats.setdefault(num, rec["category"].strip())
+    if ok and (rec.get("category_kk") or "").strip(): cats_kk.setdefault(num, rec["category_kk"].strip())
 
 for verbs in verb_packs:     # глаголы — первая категория
     for r in json.load(open(verbs / "verbs.json", encoding="utf-8")):
@@ -58,7 +63,10 @@ for d in (out_img, out_print):
     for f in d.glob("*.webp"):
         if f.name not in known: f.unlink(); print("удалён лишний", f)
 ids = [i["id"] for i in items]; assert len(ids) == len(set(ids)), "повтор id"
-data = {"categories": [{"num": n, "ru": cats[n]} for n in sorted(cats)],
+CAT_KK = {"глаголы": "Етістіктер"}   # у пакетов глаголов нет category_kk; перевод из таблицы пользователя
+for n in cats:
+    if n not in cats_kk and cats[n] in CAT_KK: cats_kk[n] = CAT_KK[cats[n]]
+data = {"categories": [dict({"num": n, "ru": cats[n]}, **({"kk": cats_kk[n]} if n in cats_kk else {})) for n in sorted(cats)],
         "cards": items}
 (ROOT / "data").mkdir(exist_ok=True)
 (ROOT / "data" / "cards.json").write_text(json.dumps(data, ensure_ascii=False, indent=1), encoding="utf-8")
