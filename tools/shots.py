@@ -27,7 +27,7 @@ with sync_playwright() as p:
         pg.screenshot(path=str(out / f"library_verbs_{name}.png"))
         for i in range(5): pg.locator("#grid li:not([hidden]) .cardbtn").nth(i).click()
         pg.wait_for_timeout(300); pg.screenshot(path=str(out / f"library_selected_{name}.png"))
-        for v in ["set", "settings", "help"]:
+        for v in ["set", "sets", "settings", "help"]:
             pg.evaluate(f"location.hash='{v}'"); pg.wait_for_timeout(900)
             pg.screenshot(path=str(out / f"library_{v}_{name}.png"))
         pg.evaluate("localStorage.clear()")

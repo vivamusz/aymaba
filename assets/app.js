@@ -70,3 +70,13 @@
   window.AYMABA_T = function (k) { return (T[window.AYMABA_LANG] || T.ru)[k] || T.ru[k] || k; };
   apply(getLang());
 })();
+
+/* Простая защита картинок карточек: без меню «Сохранить картинку», без вытаскивания мышкой.
+   Свои перетаскивания (рамки, «в набор») работают через pointer-события и кнопки, не через картинки. */
+(function () {
+  document.addEventListener("contextmenu", function (e) {
+    var el = e.target;
+    if (el && el.closest && (el.tagName === "IMG" || el.closest(".cardbtn, .slot, .sheet, .mini, #printArea"))) e.preventDefault();
+  });
+  document.addEventListener("dragstart", function (e) { if (e.target && e.target.tagName === "IMG") e.preventDefault(); });
+})();

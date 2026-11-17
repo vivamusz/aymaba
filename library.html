@@ -41,6 +41,7 @@
     <nav class="side-nav">
       <a class="side-item" href="#library" data-view="library"><span class="side-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg></span><span><span class="side-t" data-i18n="side.library"></span><span class="side-s" data-i18n="side.librarySub"></span></span><span class="side-badge" data-badge="library" hidden></span></a>
       <a class="side-item" href="#set" data-view="set"><span class="side-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg></span><span><span class="side-t" data-i18n="side.set"></span><span class="side-s" data-i18n="side.setSub"></span></span><span class="side-badge" data-badge="set" hidden></span></a>
+      <a class="side-item" href="#sets" data-view="sets"><span class="side-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg></span><span><span class="side-t" data-i18n="side.sets"></span><span class="side-s" data-i18n="side.setsSub"></span></span><span class="side-badge" data-badge="sets" hidden></span></a>
       <a class="side-item" href="#settings" data-view="settings"><span class="side-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 17H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2M6 14h12v7H6z"/></svg></span><span><span class="side-t" data-i18n="side.settings"></span><span class="side-s" data-i18n="side.settingsSub"></span></span><span class="side-badge" data-badge="settings" hidden></span></a>
       <a class="side-item" href="#help" data-view="help"><span class="side-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5" stroke-width="2.4" stroke-linecap="round"/></svg></span><span><span class="side-t" data-i18n="side.help"></span><span class="side-s" data-i18n="side.helpSub"></span></span><span class="side-badge" data-badge="help" hidden></span></a>
     </nav>
@@ -54,6 +55,16 @@
         <div><h1 id="lib-h" data-i18n="lib.h">Библиотека карточек</h1><p class="muted" data-i18n="lib.sub"></p></div>
         <input id="q" class="inp search-inp" type="search" autocomplete="off" data-i18n-ph="cp.searchph" aria-label="Поиск" data-i18n-aria="cp.search">
       </div>
+      <div class="stepbar">
+        <div class="step"><span class="step-n">1</span><span class="step-t" data-i18n="step.size">Размер листа</span>
+      <div class="size-groups" role="radiogroup" data-i18n-aria="set.size" aria-label="Размер">
+        <div class="size-group"><span class="size-gh" data-i18n="size.gcards">Карточки</span><div class="seg seg-size"><button type="button" role="radio" data-sheet="9"><b data-i18n="size.9"></b><small data-i18n="size.per9"></small></button><button type="button" role="radio" data-sheet="7"><b data-i18n="size.7"></b><small data-i18n="size.per7"></small></button><button type="button" role="radio" data-sheet="5"><b data-i18n="size.5"></b><small data-i18n="size.per5"></small></button></div></div>
+        <div class="size-group"><span class="size-gh" data-i18n="size.gstory">Сюжетные (на A4, резать)</span><div class="seg seg-size"><button type="button" role="radio" data-sheet="a5"><b data-i18n="size.a5"></b><small data-i18n="size.pera5"></small></button><button type="button" role="radio" data-sheet="a6"><b data-i18n="size.a6"></b><small data-i18n="size.pera6"></small></button><button type="button" role="radio" data-sheet="a4"><b data-i18n="size.a4"></b><small data-i18n="size.pera4"></small></button></div></div>
+      </div></div>
+        <p class="sum" data-sum aria-live="polite"></p>
+      </div>
+      <div class="step step2"><span class="step-n">2</span><span class="step-t" data-i18n="step.pick">Отметьте карточки в любых темах — поиск ищет сразу по всем</span></div>
+      <div class="ready" id="ready"><span class="muted small" data-i18n="ready.h">Готовые наборы:</span></div>
       <div class="chips" id="chips" role="group" data-i18n-aria="lib.cats" aria-label="Категории"></div>
       <div class="row-acts">
         <button type="button" class="btn btn-ghost btn-sm" id="addAll" data-i18n="cp.addcat">Добавить всё показанное</button>
@@ -67,27 +78,37 @@
     <!-- МОЙ НАБОР: листы -->
     <section class="view" data-v="set" hidden aria-labelledby="set-h">
       <div class="view-head">
-        <div><h1 id="set-h" data-i18n="set.h">Мой набор</h1><p class="muted"><span data-i18n="set.sub"></span> <span id="setInfo"></span></p></div>
+        <div><h1 id="set-h" data-i18n="set.h">Мой набор</h1><p class="muted"><span data-i18n="set.sub"></span> <span id="setInfo"></span></p><p class="sum" data-sum></p></div>
         <button type="button" class="btn btn-ghost" data-act="upload"><span aria-hidden="true">＋</span> <span data-i18n="set.upload">Свои картинки</span></button>
       </div>
       <p class="muted small" data-i18n="cp.tplhint"></p>
       <div class="mobile-outs"><div class="outs">
         <button type="button" class="btn btn-ink" data-out="print"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2M6 14h12v7H6z"/></svg><span data-i18n="out.print">Печать</span></button>
+        <button type="button" class="btn btn-ghost" data-out="preview"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="out.preview">Просмотр PDF</span></button>
         <button type="button" class="btn btn-ghost" data-out="pdf"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></svg><span data-i18n="out.pdf">Скачать PDF</span></button>
         <button type="button" class="btn btn-ghost" data-out="docx"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M8 12l1.5 6 2.5-5 2.5 5 1.5-6"/></svg><span data-i18n="out.docx">Скачать Word</span></button>
-      </div></div>
+      </div><p class="hint100 small" data-i18n="out.hint100">Печатайте в реальном размере (100%), без «по размеру страницы»</p></div>
       <p class="empty" id="setEmpty" data-i18n="set.empty"></p>
       <div id="sheets" class="sheets"></div>
+    </section>
+
+    <!-- МОИ НАБОРЫ -->
+    <section class="view" data-v="sets" hidden aria-labelledby="sets-h">
+      <div class="view-head">
+        <div><h1 id="sets-h" data-i18n="sets.h">Мои наборы</h1><p class="muted" data-i18n="sets.sub"></p></div>
+        <button type="button" class="btn btn-ink" id="newSet" data-i18n="sets.new">Новый набор</button>
+      </div>
+      <ul class="sets-list" id="setsList"></ul>
+      <p class="muted small" data-i18n="sets.note"></p>
     </section>
 
     <!-- НАСТРОЙКИ ПЕЧАТИ -->
     <section class="view" data-v="settings" hidden aria-labelledby="cfg-h">
       <h1 id="cfg-h" data-i18n="set.h.settings">Настройки печати</h1>
       <h2 class="h2s" data-i18n="set.size">Размер карточки</h2>
-      <div class="seg" role="radiogroup" id="sizeSeg">
-        <button type="button" role="radio" data-sheet="9" data-i18n="cp.tab9">9 на 9</button>
-        <button type="button" role="radio" data-sheet="7" data-i18n="cp.tab7">7 на 7</button>
-        <button type="button" role="radio" data-sheet="5" data-i18n="cp.tab5">5 на 5</button>
+      <div class="size-groups" role="radiogroup" data-i18n-aria="set.size" aria-label="Размер">
+        <div class="size-group"><span class="size-gh" data-i18n="size.gcards">Карточки</span><div class="seg seg-size"><button type="button" role="radio" data-sheet="9"><b data-i18n="size.9"></b><small data-i18n="size.per9"></small></button><button type="button" role="radio" data-sheet="7"><b data-i18n="size.7"></b><small data-i18n="size.per7"></small></button><button type="button" role="radio" data-sheet="5"><b data-i18n="size.5"></b><small data-i18n="size.per5"></small></button></div></div>
+        <div class="size-group"><span class="size-gh" data-i18n="size.gstory">Сюжетные (на A4, резать)</span><div class="seg seg-size"><button type="button" role="radio" data-sheet="a5"><b data-i18n="size.a5"></b><small data-i18n="size.pera5"></small></button><button type="button" role="radio" data-sheet="a6"><b data-i18n="size.a6"></b><small data-i18n="size.pera6"></small></button><button type="button" role="radio" data-sheet="a4"><b data-i18n="size.a4"></b><small data-i18n="size.pera4"></small></button></div></div>
       </div>
       <p class="muted small" id="sheetInfo"></p>
       <h2 class="h2s" data-i18n="set.caption">Подпись</h2>
@@ -97,6 +118,12 @@
         <button type="button" role="radio" data-cap="ru" data-i18n="cp.capru">Русский</button>
       </div>
       <p class="muted small" id="capHint"></p>
+      <h2 class="h2s" data-i18n="cut.h">Линии реза</h2>
+      <div class="seg" role="radiogroup" id="cutSeg">
+        <button type="button" role="radio" data-cut="0" data-i18n="cut.off">Без линий</button>
+        <button type="button" role="radio" data-cut="1" data-i18n="cut.on">С линиями реза</button>
+      </div>
+      <p class="muted small" data-i18n="cut.hint"></p>
       <h2 class="h2s"><label for="fname" data-i18n="cp.name">Название файла</label></h2>
       <input id="fname" class="inp" autocomplete="off" data-i18n-ph="cp.nameph">
       <p class="muted small" id="nameHint"></p>
@@ -115,23 +142,26 @@
   </main>
 
   <aside class="panel-r" aria-labelledby="pr-h">
-    <div class="pr-head"><h2 id="pr-h" class="h2s"><span data-i18n="set.h">Мой набор</span> <span class="muted" id="prCount"></span></h2>
+    <div class="pr-head"><h2 id="pr-h" class="h2s"><span id="prName">Мой набор</span> <span class="muted" id="prCount"></span></h2>
       <button type="button" class="link-btn" id="clearAll" data-i18n="cp.clear">Очистить всё</button></div>
-    <p class="muted small" id="prInfo"></p>
-    <ul class="mini" id="mini"></ul>
+    <p class="sum" data-sum></p>
+    <div class="mini-sheets" id="mini"></div>
+    <a class="btn btn-ghost btn-sm w100" href="#sets" data-i18n="sets.save">Сохранить / мои наборы</a>
     <button type="button" class="btn btn-ghost btn-sm w100" data-act="upload"><span aria-hidden="true">＋</span> <span data-i18n="set.upload">Свои картинки</span></button>
     <a class="btn btn-ghost btn-sm w100" href="#set" data-i18n="set.open">Открыть листы</a>
     <div class="pr-outs"><div class="outs">
         <button type="button" class="btn btn-ink" data-out="print"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 18H4a1 1 0 0 1-1-1v-6a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2v6a1 1 0 0 1-1 1h-2M6 14h12v7H6z"/></svg><span data-i18n="out.print">Печать</span></button>
+        <button type="button" class="btn btn-ghost" data-out="preview"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg><span data-i18n="out.preview">Просмотр PDF</span></button>
         <button type="button" class="btn btn-ghost" data-out="pdf"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></svg><span data-i18n="out.pdf">Скачать PDF</span></button>
         <button type="button" class="btn btn-ghost" data-out="docx"><svg class="oi" viewBox="0 0 24 24" aria-hidden="true"><path d="M14 3H6a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V8zM14 3v5h5M8 12l1.5 6 2.5-5 2.5 5 1.5-6"/></svg><span data-i18n="out.docx">Скачать Word</span></button>
-      </div></div>
+      </div><p class="hint100 small" data-i18n="out.hint100">Печатайте в реальном размере (100%), без «по размеру страницы»</p></div>
     <p class="status small" id="msg" role="status" aria-live="polite"></p>
   </aside>
 </div>
 
+<a class="mob-sum" href="#set" id="mobSum" hidden><span data-sum></span><b data-i18n="mob.toprint">К печати ›</b></a>
 <nav class="mob-nav" aria-label="Разделы">
-  <a class="mob-item" href="#library" data-view="library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span data-i18n="mob.library"></span><span class="side-badge" data-badge="library" hidden></span></a><a class="mob-item" href="#set" data-view="set"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg><span data-i18n="mob.set"></span><span class="side-badge" data-badge="set" hidden></span></a><a class="mob-item" href="#settings" data-view="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 17H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2M6 14h12v7H6z"/></svg><span data-i18n="mob.settings"></span><span class="side-badge" data-badge="settings" hidden></span></a><a class="mob-item" href="#help" data-view="help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5" stroke-width="2.4" stroke-linecap="round"/></svg><span data-i18n="mob.help"></span><span class="side-badge" data-badge="help" hidden></span></a>
+  <a class="mob-item" href="#library" data-view="library"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 10.5 12 3l9 7.5V21h-6v-6H9v6H3z"/></svg><span data-i18n="mob.library"></span><span class="side-badge" data-badge="library" hidden></span></a><a class="mob-item" href="#set" data-view="set"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="8" height="8" rx="2"/><rect x="13" y="3" width="8" height="8" rx="2"/><rect x="3" y="13" width="8" height="8" rx="2"/><rect x="13" y="13" width="8" height="8" rx="2"/></svg><span data-i18n="mob.set"></span><span class="side-badge" data-badge="set" hidden></span></a><a class="mob-item" href="#sets" data-view="sets"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 6h16M4 12h16M4 18h10"/></svg><span data-i18n="mob.sets"></span></a><a class="mob-item" href="#settings" data-view="settings"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 9V3h12v6M6 17H4a1 1 0 0 1-1-1v-6a1 1 0 0 1 1-1h16a1 1 0 0 1 1 1v6a1 1 0 0 1-1 1h-2M6 14h12v7H6z"/></svg><span data-i18n="mob.settings"></span><span class="side-badge" data-badge="settings" hidden></span></a><a class="mob-item" href="#help" data-view="help"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 11v6M12 7.5v.5" stroke-width="2.4" stroke-linecap="round"/></svg><span data-i18n="mob.help"></span><span class="side-badge" data-badge="help" hidden></span></a>
 </nav>
 
 <input id="files" type="file" accept="image/png,image/jpeg,image/webp,image/gif,.png,.jpg,.jpeg,.webp" multiple class="sr-only">

@@ -10,6 +10,8 @@ html{scroll-behavior:smooth;scroll-padding-top:80px}
 @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
 body{margin:0;font-family:"Segoe UI",Roboto,"Noto Sans","Helvetica Neue",Arial,sans-serif;font-size:17px;line-height:1.55;color:var(--ink);background:var(--sand)}
 img,svg{max-width:100%}
+/* картинки карточек нельзя сохранить правой кнопкой / долгим нажатием / вытаскиванием (простая защита; настоящая — с подпиской) */
+img{-webkit-touch-callout:none;-webkit-user-select:none;user-select:none;-webkit-user-drag:none}
 a{color:var(--green-dark)}
 h1,h2,h3{line-height:1.2;margin:0 0 .5em}
 h2{font-size:clamp(1.5rem,3.5vw,2rem)}
