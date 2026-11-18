@@ -1,3 +1,8 @@
+.powered{display:flex;flex-wrap:wrap;gap:.2rem .6rem;min-height:36px;padding:.35rem .8rem;align-items:center;justify-content:center;text-align:center;background:#1a1612;color:#faf7f1;font-size:.85rem;font-weight:500;letter-spacing:.02em;text-decoration:none;line-height:1.3}
+.powered b{font-weight:700}.powered .pw-sep{opacity:.6}
+.powered:hover{text-decoration:underline}
+@media (max-width:520px){.powered{font-size:.78rem}.powered .pw-sep{display:none}}
+@media print{.powered{display:none!important}}
 /* AYMABA — общий стиль для всех страниц. Цвета меняются в :root. */
 :root{
   --green:#1f7a6d; --green-dark:#165c52; --green-soft:#e3f2ee;
