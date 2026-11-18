@@ -180,3 +180,18 @@ dialog#viewer::backdrop{background:rgba(31,42,46,.6)}
 @media (min-width:900px){.chips{flex-wrap:wrap;overflow:visible}.lib-tools{position:static}}
 
 .mission{padding:8px 0 8px}.mission-card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--coral,#e07a5f);border-radius:var(--r);padding:20px 24px;max-width:860px;margin:0 auto}.mission-card p{margin:0 0 .5em;font-size:1.05rem;line-height:1.55}.mission-card p:last-child{margin:0;color:var(--muted)}
+
+/* страница товара */
+.product{padding:16px 0 40px}.product .back{display:inline-block;margin:8px 0 16px;color:var(--muted);text-decoration:none}.product .back:hover{text-decoration:underline}
+.pp-hero{display:grid;grid-template-columns:1.1fr 1fr;gap:28px;align-items:start}
+.pp-ph{aspect-ratio:4/3;border:2px dashed var(--line);border-radius:var(--r);display:flex;align-items:center;justify-content:center;background:#fff;color:var(--muted);text-align:center;padding:20px}
+.pp-kind{margin:0;color:var(--muted);font-size:.95rem}.pp-info h1{margin:.2em 0 .3em}.pp-lead{font-size:1.1rem;margin:0 0 14px}
+.pp-facts{list-style:none;padding:0;margin:0 0 18px;display:grid;gap:8px}.pp-facts li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:10px 14px}.pp-facts b{font-size:1.15rem}
+.pp-buy{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:18px 20px}.pp-price{font-size:1.8rem;font-weight:800;margin:0 0 10px}.pp-note{margin:10px 0 0;color:var(--muted);font-size:.93rem}
+.pp-sec{margin:34px 0 0}.pp-sec h2{margin-bottom:.5em}
+.pp-two{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:12px}.pp-two>div{background:#fff;border:1px solid var(--line);border-radius:var(--r);padding:16px 18px}.pp-two h3{margin-top:0}.pp-two p{margin:0}
+.pp-cats{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.pp-cats li{background:#fff;border:1px solid var(--line);border-radius:12px;padding:12px 14px;display:grid;grid-template-columns:1fr auto;gap:4px 8px}.pp-cats small{grid-column:1/-1;color:var(--muted)}.pp-n{font-weight:800;color:var(--coral,#e07a5f)}
+.pp-steps{padding-left:1.3em}.pp-steps li{margin:.3em 0}.pp-warn{color:var(--muted);font-size:.93rem}
+.pp-buy-bottom{margin-top:34px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}.pp-buy-bottom .pp-price{margin:0}
+@media (max-width:820px){.pp-hero,.pp-two{grid-template-columns:1fr}.pp-cats{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.pp-cats{grid-template-columns:1fr}}

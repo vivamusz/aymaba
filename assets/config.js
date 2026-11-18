@@ -3,7 +3,6 @@
 window.AYMABA_CONFIG = {
   CONSTRUCTOR_URL: "https://vivamusz.github.io/aba-constructor/",
   COMMUNICATOR_URL: "https://vivamusz.github.io/pecs-aac/",
-  // TODO: вставить ссылку на страницу продажи набора глаголов (нынешний сайт AYMABA).
-  // Пока стоит "#", кнопка «Купить» показывается как «Скоро» и не нажимается.
-  VERB_SET_URL: "https://apple-reef-pearl-jolly.grok.me/"
+  // Страница товара набора глаголов (свой экран с описанием и кнопкой покупки).
+  VERB_SET_URL: "product-verbs.html"
 };
