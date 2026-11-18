@@ -195,3 +195,4 @@ dialog#viewer::backdrop{background:rgba(31,42,46,.6)}
 .pp-buy-bottom{margin-top:34px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}.pp-buy-bottom .pp-price{margin:0}
 @media (max-width:820px){.pp-hero,.pp-two{grid-template-columns:1fr}.pp-cats{grid-template-columns:1fr 1fr}}
 @media (max-width:520px){.pp-cats{grid-template-columns:1fr}}
+.pp-cover,.pp-collage{display:block;width:100%;height:auto;border-radius:var(--r);border:1px solid var(--line);background:#fff}
