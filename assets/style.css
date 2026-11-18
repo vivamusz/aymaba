@@ -178,3 +178,5 @@ dialog#viewer::backdrop{background:rgba(31,42,46,.6)}
 .v-note{background:#fff4e5;border:1px solid #f3d2a2;border-radius:12px;padding:8px 12px;color:#7a4a12;font-size:.92rem;margin:0}
 .v-close{position:absolute;top:10px;right:10px;width:44px;height:44px;border-radius:50%;border:0;background:#fff;box-shadow:var(--shadow);font-size:1.1rem;cursor:pointer}
 @media (min-width:900px){.chips{flex-wrap:wrap;overflow:visible}.lib-tools{position:static}}
+
+.mission{padding:8px 0 8px}.mission-card{background:#fff;border:1px solid var(--line);border-left:5px solid var(--coral,#e07a5f);border-radius:var(--r);padding:20px 24px;max-width:860px;margin:0 auto}.mission-card p{margin:0 0 .5em;font-size:1.05rem;line-height:1.55}.mission-card p:last-child{margin:0;color:var(--muted)}
